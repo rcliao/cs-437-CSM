@@ -5,6 +5,12 @@ Project CSM
 
 Steps by steps in windows(sorry, I only have microsoft):
 
+* note: before start the following steps, please download the [node.js](http://nodejs.org) first; then download the content of github
+    * there are a few ways to download from github, first using git bash
+    * i think you can also click on "zip" button and it will be downloaded automatically
+    * if you have trouble getting environment done, please post on group as soon as possible, I'm willing to help
+* once you are done with downloading the above things (node.js) you can do the following thing to test the environment
+
 1. open "commmand prompt"
 
 2. direct yourself to this folder (example: c:/user/[username]/cs-437-CSM)
