@@ -3,6 +3,7 @@
 <title>Template</title>
 
 <link rel="stylesheet" media="screen and (max-width: 850px)" href="css/style.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <script src="lib/angular/angular.js"></script>
 <script src="js/controllers.js"></script>
@@ -10,30 +11,12 @@
 <script src="js/services.js"></script>
 <script src="lib/angular/angular-resource.js"></script>
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
 </head>
-<body>
+<body ng-controller = "MainCtrl">
 	<div class="main-container">
-		<div class="header">
-			<p id="header">Cal State Mobile</p>
-		</div>
-		<div class = "main-menu-button">
-			<p id = "main-menu">E-mail</p>
-		</div>
-		<div class = "main-menu-button">
-			<p id = "main-menu">GET</p>
-		</div>
-		<div class = "main-menu-button">
-			<p id = "main-menu">Schedule</p>
-		</div>
-		<div class = "main-menu-button">
-			<p id = "main-menu">Parking</p>
-		</div>
-		<div class = "main-menu-Annobutton">
-			<p id = "main-menu">Announcement</p>
-		</div>
-		<div class = "clear"> </div>
+		<!-- set up the routing -->
+		<ng-view>
+		
 	</div>
 </body>
 </html>

@@ -1,0 +1,14 @@
+<div class="header">
+	<p id="header">Announcement</p>
+</div>
+<div class="announcement-container">
+	<div class="announcement-header">
+		Announcement
+	</div>
+	<div class="announcement-holder" ng-repeat = "announcement in announcements">
+		<div ng-class-odd="'announcement-holder-odd'" ng-class-even="'announcement-holder-even'">
+			{{announcement.head}}: {{announcement.context}}
+		</div>
+	</div>
+</div>
+<div class = "clear"> </div>

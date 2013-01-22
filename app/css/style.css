@@ -31,17 +31,20 @@ html, body {
 }
 
 .main-container {
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
 	width: 100%;
 	height: 100%;
 	
 }
 .header {
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
 	float: left;
 	width: 100%;
+	height: 15%;
 	background-color: yellow;
 	
 }
@@ -60,9 +63,43 @@ html, body {
 	background-color:orange;
 }
 .log-in-container {
+	float: left;
 	text-align: center;
 	margin: 5% 5% 5% 5%;
 	width: 80%;
+}
+.announcement-container {
+	float: left;
+	text-align: center;
+	margin: 10% 10% 0% 10%;
+	width: 80%;
+}
+.announcement-header {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-weight: bold;
+	width: 80%;
+	background-color: lightyellow;
+}
+.announcement-holder {
+	
+}
+.announcement-holder-odd {
+	float: left;
+	width: 100%;
+	background-color: grey;
+	border-style:solid;
+	border-color: blue;
+	border-width: 2px;
+}
+.announcement-holder-even {
+	float: left;
+	width: 100%;
+	background-color: lightgrey;
+	border-style:solid;
+	border-color: blue;
+	border-width: 2px;
 }
 .clear{
 	clear:both;
@@ -76,11 +113,14 @@ table.login {
 
 input.login {
 	width: 100%;
+	height: 30px;
+	font-size: large;
+	font-weight: bold;
 }
 
 p#header { 
 	text-align: center;
-	font-size: 300%;
+	font-size: large;
 	font-weight:bold;
 }
 p#main-menu { 
