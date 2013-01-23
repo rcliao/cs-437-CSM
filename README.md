@@ -8,7 +8,7 @@ Steps by steps in windows(sorry, I only have microsoft):
 * note: before start the following steps, please download the [node.js](http://nodejs.org) and [mongodb](http://www.mongodb.org/downloads) first; then download the content of github
     * there are a few ways to download from github, first using git bash or github software (which i went over it in class)
     	* for github, please click on synch to download the latest version
-	* for git bash, please direct you to the folder(c:/user/[username]/cs-437-CSM) and type
+        * for git bash, please direct you to the folder(c:/user/[username]/cs-437-CSM) and type
 	> git pull origin master
     * if you have trouble getting environment done, please post on group as soon as possible, I'm always willing to help
 * once you are done with downloading the above things (node.js, mongodb, and github) you can do the following thing to test the environment
@@ -23,11 +23,11 @@ Steps by steps in windows(sorry, I only have microsoft):
 4. type in
 > node server.js
 
-    * note: if you cannot run node.js due to lack of 'expresss' please do the following two steps
-    	1. type
-	> npm install express
-	2. type
-	> npm install mongojs
+* note: if you cannot run node.js due to lack of 'expresss' please do the following two steps
+    1. type
+> npm install express
+    2. type
+> npm install mongojs
 
 5. open browser and type in
 > localhost:8000/index.html
