@@ -12,12 +12,14 @@ function MenuCtrl($scope) {
 
 }
 
-function AnnoCtrl($scope) {
+function AnnoCtrl($scope, Resources) {
 	$scope.announcements = [
-		{head:"news", context:"something here"},
-		{head:"news", context:"something here"},
-		{head:"news", context:"something here"},
-		{head:"news", context:"something here"},
-		{head:"news", context:"something here"},
+		{head:"Campus News", content:"something here"},
+		{head:"news", content:"something here"},
+		{head:"news", content:"something here"},
+		{head:"news", content:"something here"},
+		{head:"news", content:"something here"},
 	];
+	
+	
 }

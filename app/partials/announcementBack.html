@@ -1,0 +1,27 @@
+<div class="header">
+	<p id="header">Announcement</p>
+</div>
+<div class="announcement-container">
+	<div class="announcement-header">
+		Announcement
+	</div>
+	<form ng-submit="add()">
+	<div class="announcement-holder">
+		<div class = "announcement-holder-odd">
+			<table style="margin-left:auto; margin-right:auto;"><tbody>
+			<tr>
+				<td>Where? </td>
+				<td><input type="text" ng-model = "announcement.head"/></td> 
+			</tr>
+			<tr>
+				<td>What? </td>
+				<td><textarea ng-model = "announcement.content"></textarea></td>
+			</tr>
+			</tbody></table>
+		</div>
+	</div>
+	<input type="submit" value="Add"/>
+	</form>
+	{{announcements}}
+</div>
+<div class = "clear"> </div>

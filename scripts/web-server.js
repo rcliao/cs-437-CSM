@@ -6,7 +6,7 @@ var sys = require('sys'),
     url = require('url'),
     events = require('events');
 
-var DEFAULT_PORT = 8000;
+var DEFAULT_PORT = 8002;
 
 function main(argv) {
   new HttpServer({
@@ -18,7 +18,7 @@ function main(argv) {
 function escapeHtml(value) {
   return value.toString().
     replace('<', '&lt;').
-    replace('>', '&gt;').
+    replace('>', '&gt').
     replace('"', '&quot;');
 }
 
@@ -56,7 +56,6 @@ HttpServer.prototype.handleRequest_ = function(req, res) {
     logEntry += ' ' + req.headers['user-agent'];
   }
   sys.puts(logEntry);
-
   req.url = this.parseUrl_(req.url);
   var handler = this.handlers[req.method];
   if (!handler) {
@@ -161,7 +160,7 @@ StaticServlet.prototype.sendRedirect_ = function(req, res, redirectUrl) {
     '">here</a>.</p>'
   );
   res.end();
-  sys.puts('301 Moved Permanently: ' + redirectUrl);
+  sys.puts('401 Moved Permanently: ' + redirectUrl);
 };
 
 StaticServlet.prototype.sendFile_ = function(req, res, path) {
