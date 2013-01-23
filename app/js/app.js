@@ -7,6 +7,6 @@ angular.module('csm', ['csm.services']).
 		when('/login', {templateUrl: 'partials/login.html',   controller: LoginCtrl}).
 		when('/main', {templateUrl: 'partials/menu.html',   controller: MenuCtrl}).
 		when('/announcement', {templateUrl: 'partials/announcement.html',   controller: AnnoCtrl}).
-		when('/announcementBack', {templateUrl: 'partials/announcementBack.html',   controller: AnnoCtrl}).
+		when('/announcementBack', {templateUrl: 'partials/announcementBack.html',   controller: AnnoNewCtrl}).
 		otherwise({redirectTo: '/main'});
 }]);

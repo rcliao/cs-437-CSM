@@ -53,7 +53,7 @@ Rest API - Node/MongoDB/Angular
 angular.module('csm.services', ['ngResource']).
     factory('Resources', ['$resource', '$http',
         function($resource, $http) {
-            return $resource('api/phones/:_id', {}, {
+            return $resource('api/:collection/:_id', {}, {
                 'count': {method:'PUT', params:{_id: 'count'}},                           
                 'distinct': {method:'PUT', params:{_id: 'distinct'}},      
                 'find': {method:'PUT', params:{_id: 'find'}, isArray:true},              

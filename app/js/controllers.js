@@ -13,13 +13,15 @@ function MenuCtrl($scope) {
 }
 
 function AnnoCtrl($scope, Resources) {
-	$scope.announcements = [
-		{head:"Campus News", content:"something here"},
-		{head:"news", content:"something here"},
-		{head:"news", content:"something here"},
-		{head:"news", content:"something here"},
-		{head:"news", content:"something here"},
-	];
-	
-	
+	$scope.announcements = Resources.query({collection: 'announcements'});
+}
+
+function AnnoNewCtrl(Resources, $routeParams, $scope) {   
+    $scope.announcement = new Resources();
+    
+    $scope.save = function () {
+        Resources.save({collection: 'announcements'}, $scope.announcement, function (res) { if (res.ok === 1) { $location.path("/anno");}})
+		$scope.announcement.head = ''
+		$scope.announcement.content = ''
+    }
 }
