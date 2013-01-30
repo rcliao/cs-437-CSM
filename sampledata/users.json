@@ -1,0 +1,34 @@
+[
+{
+    "_id": 1,
+    "username": "user1",
+    "password": "abcd",
+    "userType": "student",
+    "holds": [
+        {
+            "from": "writing center",
+            "content": "WPE required"
+        },
+        {
+            "from": "CS department",
+            "content": "cs 101 required"
+        }
+    ]
+},
+{
+    "_id": 2,
+    "username": "user2",
+    "password": "abcd",
+    "userType": "student",
+    "holds": [
+        {
+            "from": "writing center",
+            "content": "WPE required"
+        },
+        {
+            "from": "CS department",
+            "content": "cs 101 required"
+        }
+    ]
+}
+]
