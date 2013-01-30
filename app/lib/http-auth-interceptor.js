@@ -4,6 +4,7 @@
  * License: MIT
  */
 angular.module('http-auth-interceptor', [])
+
   .provider('authService', function() {
     /**
      * Holds all the requests which failed due to 401 response,

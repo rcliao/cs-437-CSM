@@ -8,21 +8,21 @@ angular.module('csm.directives', []).
       restrict: 'C',
       link: function(scope, elem, attrs) {
         //once Angular is started, remove class:
-        elem.removeClass('waiting-for-angular');
+        //elem.removeClass('waiting-for-angular');
         
-        var login = elem.find('#login-holder');
-        var main = elem.find('#content');
+        var login = elem.find('.login-container');
+        var main = elem.find('.content');
         
         login.hide();
         
         scope.$on('event:auth-loginRequired', function() {
-          login.slideDown('slow', function() {
-            main.hide();
-          });
+			console.log("login-required");
+            login.show();
+			main.hide();
         });
         scope.$on('event:auth-loginConfirmed', function() {
           main.show();
-          login.slideUp();
+          login.hide();
         });
       }
     }

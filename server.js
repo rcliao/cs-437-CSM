@@ -38,7 +38,26 @@ var fn = function (req, res) {
     return fn;
 };
 
+var authorized = false;
+
 /* Routes */
+
+app.post('/auth/login', function(req, res) {
+	authorized = true;
+	res.send(200);
+});
+
+app.post('/auth/logout', function(req, res) {
+	authorized = false;
+	res.send(200);
+});
+
+app.get('/data/protected', function(req, res) {
+	if (authorized == true)
+		res.send('something restricted', 200);
+	else
+		res.send('Authentication required', 401);
+});
 
 // Query
 app.get('/api/:collection', function(req, res) { 

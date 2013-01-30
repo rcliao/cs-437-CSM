@@ -62,5 +62,39 @@ angular.module('csm.services', ['ngResource']).
                 'aggregate': {method:'PUT', params:{_id: 'aggregate'}, isArray:true}   
             });
         }
-    ])
+    ]).
+	factory('AuthService', function($rootScope, $cookieStore) {
+	var authServices = {};
+	
+	authServices.loginConfirmed = function(username) {
+		$cookieStore.put("user", username);
+		$rootScope.$broadcast('event:auth-loginConfirmed');
+	}
+
+	return authServices;
+	}).
+	config(function($httpProvider) {
+    
+    var interceptor = ['$rootScope', '$q', function($rootScope, $q) {
+      function success(response) {
+        return response;
+      }
+ 
+      function error(response) {
+        if (response.status === 401) {
+          var deferred = $q.defer();
+          $rootScope.$broadcast('event:auth-loginRequired');
+          return deferred.promise;
+        }
+        // otherwise
+        return $q.reject(response);
+      }
+ 
+      return function(promise) {
+        return promise.then(success, error);
+      }
+ 
+    }];
+    $httpProvider.responseInterceptors.push(interceptor);
+  });
 

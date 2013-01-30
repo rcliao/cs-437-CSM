@@ -1,9 +1,6 @@
 'use strict';
 
 /* Controllers */
-function LoginCtrl($scope) {
-	
-}
 
 function MainCtrl($scope) {
 }
@@ -26,54 +23,34 @@ function AnnoNewCtrl(Resources, $routeParams, $scope) {
     }
 }
 
-function LoginController ($scope, $http, authService) {
+function LoginController ($scope, $http, $location, $rootScope, $cookieStore, AuthService) {
 	$scope.something = ['something'];
-	$scope.status = 'logout';
+	$scope.status = 'guest';
     $scope.login = function() {
       $http.post('auth/login').success(function() {
-        authService.loginConfirmed();
+        AuthService.loginConfirmed($scope.username);
       });
     }
 	
 	$scope.$on('event:auth-loginConfirmed', function() {
-         $scope.status = ' logged in ';
+         $scope.status = $cookieStore.get("user") + ' logged in ';
+    });
+	
+	$scope.$on('event:auth-loginRequired', function() {
+         $scope.status = ' log in required ';
     });
 	
 	$scope.logout = function() {
       $http.post('auth/logout').success(function() {
-        $scope.status = ' logged out ';
+	    $cookieStore.remove("user");
+        $scope.status = $cookieStore.get("user") + ' logged out ';
       });
     }
 	
 	$scope.restrictedAction = function() {
-      $http.post('data/protected', $scope.content).success(function(response) {
+      $http.get('data/protected').success(function(response) {
         // this piece of code will not be executed until user is authenticated
         $scope.something.push(response);
-      });
-    }
-}
-
-function ContentController ($scope, $http) {
-
-    $scope.publicContent = [];
-    $scope.restrictedContent = [];
-
-    $scope.publicAction = function() {
-      $http.post('data/public', $scope.publicData).success(function(response) {
-        $scope.publicContent.push(response);
-      });
-    }
-
-    $scope.restrictedAction = function() {
-      $http.post('data/protected', $scope.restrictedData).success(function(response) {
-        // this piece of code will not be executed until user is authenticated
-        $scope.restrictedContent.push(response);
-      });
-    }
-
-    $scope.logout = function() {
-      $http.post('auth/logout').success(function() {
-        $scope.restrictedContent = [];
       });
     }
 }
