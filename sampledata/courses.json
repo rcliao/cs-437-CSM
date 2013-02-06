@@ -1,0 +1,450 @@
+[
+{
+	"term":"Winter 2013 ", 
+    "_id": 1,
+    "title": "Introduction to Higher Education for Computer Science Majors",
+	"number": "101",
+    "subject": "CS",
+	"capacity": 30,
+    "students":" ",
+	"units": 2
+},
+{	"term":"Winter 2013 ", 
+    "_id": 2,
+    "title": "Introduction to Web Site Development",
+	"number": "120",
+    "subject": "CS",
+	"capacity": 30,
+    "students":" ", 
+	"units": 3
+},
+
+{	
+	"term":"Winter 2013 ", 
+    "_id": 3,
+    "title": "Introduction to Higher Education for Computer Science Majors",
+	"number": "122",
+    "subject": "CS",
+	"capacity": 30,
+    "students":"  ",
+	"units": 2
+},
+
+{	
+	"term":"Winter 2013 ",
+    "_id": 4,
+    "title": "Introduction to Computers",
+	"number": "160",
+    "subject": "CS",
+	"capacity": 30,
+    "students":"  ",
+	"units": 3
+},
+{	
+	"term":"Winter 2013 ",
+    "_id": 5,
+    "title": "BASIC Programming",
+	"number": "190",
+    "subject": "CS",
+	"capacity": 30,
+    "students":" ",
+	"units": 2
+},
+
+{
+	"term":"Winter 2013 ",
+    "_id": 6,
+    "title": "Introduction to Programming",
+	"number": "201",
+    "subject": "CS",
+	"capacity": 30,
+    "students":" ", 
+	"units": 5
+},
+
+{
+	"term":"Winter 2013 ",
+    "_id": 7,
+    "title": "Introduction to Object Oriented Programming",
+	"number": "202",
+    "subject": "CS",
+	"capacity": 30,
+    "students":" ", 
+	"units": 5
+},
+
+{
+	"term":"Winter 2013 ",
+    "_id": 8,
+    "title": "Programming with Data Structures",
+	"number": "203",
+    "subject": "CS",
+	"capacity": 30,
+    "students":" ", 
+	"units": 5
+},
+
+{
+	"term":"Winter 2013 ",
+    "_id": 9,
+    "title": "C Programming",
+	"number": "242",
+    "subject": "CS",
+	"capacity": 30,
+    "students":" ", 
+	"units": 4
+},
+
+{
+	"term":"Winter 2013 ",
+    "_id": 10,
+    "title": "Using Operating Systems and Networks for Programmers",
+	"number": "245",
+    "subject": "CS",
+	"capacity": 30,
+    "students":" ", 
+	"units": 4
+},
+
+{
+	"term":"Winter 2013 ",
+    "_id": 11,
+    "title": "Introduction to FORTRAN Programming",
+	"number": "290",
+    "subject": "CS",
+	"capacity": 30,
+    "students":" ", 
+	"units": 2
+},
+
+{
+	"term":"Winter 2013 ",
+    "_id": 12,
+    "title": "Computer Ethics in the Information Age",
+	"number": "301",
+    "subject": "CS",
+	"capacity": 30,
+    "students":" ", 
+	"units": 1
+},
+
+{
+	"term":"Winter 2013 ",
+    "_id": 13,
+    "title": "Data Structures and Algorithms",
+	"number": "312",
+    "subject": "CS",
+	"capacity": 30,
+    "students":" ", 
+	"units": 4
+},
+
+{
+	"term":"Winter 2013 ",
+    "_id": 14,
+    "title": "Web and Internet Programming",
+	"number": "320",
+    "subject": "CS",
+	"capacity": 30,
+    "students":" ", 
+	"units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 15,
+    "title": "Functional Programming",
+    "number": "332F",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 2
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 16,
+    "title": "Logic Programming",
+    "number": "332L",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 2
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 17,
+    "title": "C++ Object Oriented Programming",
+    "number": "332C",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 2
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 18,
+    "title": "Software Design",
+    "number": "337",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 3
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 19,
+    "title": "Assembly Language and Systems Programming",
+    "number": "340",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 20,
+    "title": "Object Oriented Programming using C++",
+    "number": "342",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 21,
+    "title": "UNIX and Shell Programming",
+    "number": "345",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 22,
+    "title": "Parallel and Distributed Programming",
+    "number": "370",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 23,
+    "title": "Introduction to Automata Theory",
+    "number": "386",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 24,
+    "title": "Principles of Data Base Systems",
+    "number": "422",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 25,
+    "title": "Software Engineering",
+    "number": "437",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 5
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 26,
+    "title": "Introduction to Operating Systems",
+    "number": "440",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 27,
+    "title": "Computer Networks Configuration and Management",
+    "number": "447",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 28,
+    "title": "Computer Graphics",
+    "number": "450",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 5
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 29,
+    "title": "Multimedia Software Systems",
+    "number": "451",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 30,
+    "title": "Topics in Adavanced Computer Science",
+    "number": "454",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 31,
+    "title": "Artificial Intelligence",
+    "number": "460",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 32,
+    "title": "Machine Learning",
+    "number": "461",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 33,
+    "title": "Computer Networking Protocols",
+    "number": "470",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 34,
+    "title": "Cryptography and Information Security",
+    "number": "480",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 35,
+    "title": "Computability and Intractability",
+    "number": "486",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 36,
+    "title": "Compilers",
+    "number": "488",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 37,
+    "title": "Computer Science Recapitulation",
+    "number": "490",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 2
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 38,
+    "title": "Software Design Laboratory",
+    "number": "496A",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 2
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 36,
+    "title": "Software Design Laboratory",
+    "number": "496B",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 2
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 37,
+    "title": "Software Design Laboratory",
+    "number": "496C",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 2
+},
+
+{
+    "term": "Winter 2013 ",
+    "_id": 36,
+    "title": "Undergraduate Directed Study",
+    "number": "499",
+    "subject": "CS",
+    "capacity": 30,
+    "students": " ",
+    "units": 4
+}
+
+]

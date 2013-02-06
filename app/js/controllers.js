@@ -9,6 +9,13 @@ function MenuCtrl($scope) {
 
 }
 
+function GETMenuCtrl($scope) {
+}
+
+function GETHoldsCtrl($scope, Resources) {
+	$scope.holds = Resources.query({collection: 'holds'});
+}
+
 function AnnoCtrl($scope, Resources) {
 	$scope.announcements = Resources.query({collection: 'announcements'});
 }
