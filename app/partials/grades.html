@@ -1,0 +1,58 @@
+<div class="header">
+	<p id="header">Grades</p>
+</div>
+<div class="grades-container">
+<p style="text-align: center;">{{SelectedTerm.value}}</p>
+<table class="gradesTable">
+	<tbody>
+	<tr>
+		<th>
+			Class
+		</th>
+		<th>
+			Description
+		</th>
+		<th>
+			Grade
+		</th>
+	</tr>
+	<tr ng-repeat="grade in grades | filter: SelectedTerm.value">
+		<td>
+			{{grade.values.class}}
+		</td>
+		<td>
+			{{grade.values.description}}
+		</td>
+		<td>
+			{{grade.values.grade}}
+		</td>
+	</tr>
+	</tbody>
+</table>
+<select style="width: 120px; float: right; margin-right: 5%;" ng-model="SelectedTerm" ng-options="term.value for term in terms">
+  <option>{{term}}</option>
+</select>
+</br>
+<div class="grades-container">
+<table class="gradesTable">
+	<tbody>
+	<tr>
+		<th>
+			Total Unit
+		</th>
+		<th>
+			Overall GPA
+		</th>
+	</tr>
+	<tr>
+		<td>
+			168
+		</td>
+		<td>
+			5.0
+		</td>
+	</tr>
+	</tbody>
+</table>
+</div>
+<div class = "clear"> </div>
