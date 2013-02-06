@@ -54,3 +54,16 @@ function LoginController ($scope, $http, $location, $rootScope, $cookieStore, Au
       });
     }
 }
+
+function GradesCtrl($scope, Resources) {
+	$scope.grades = [{'term': 'Spring / 2013', 'values':{'class': 'CS 437', 'description': 'Senior Software Design', 'grade': 'A+'}},
+					{'term': 'Winter / 2013', 'values':{'class': 'CS 520', 'description': 'Senior Web Design', 'grade': 'S'}}];
+					
+	$scope.terms = Resources.query({collection: 'terms'}, 
+		function(res) {
+			$scope.SelectedTerm = res[0];
+		}
+	);
+	
+	$scope.SelectedTerm;
+}

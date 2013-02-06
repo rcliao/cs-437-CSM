@@ -8,5 +8,6 @@ angular.module('csm', ['csm.services', 'ngCookies', 'csm.directives']).
 		when('/main', {templateUrl: 'partials/menu.html',   controller: MenuCtrl}).
 		when('/announcement', {templateUrl: 'partials/announcement.html',   controller: AnnoCtrl}).
 		when('/announcementBack', {templateUrl: 'partials/announcementBack.html',   controller: AnnoNewCtrl}).
+		when('/grades', {templateUrl: 'partials/grades.html',   controller: GradesCtrl}).
 		otherwise({redirectTo: '/main'});
 }]);

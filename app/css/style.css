@@ -129,4 +129,28 @@ p#main-menu {
 	font-weight:bold;
 }
 
+div.grades-container {
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.grades-container table.gradesTable {
+	margin: 3% 3% 3% 3%;
+	border: 1px solid black;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+div.grades-container table.gradesTable th,td {
+	border: 1px solid black;
+}
+div.grades-container table.gradesTable th {
+	background-color: lightgrey;
+}
+div.grades-container table.gradesTable td {
+	text-align: center;
+	background-color: darkgrey;
+}
+
 }
