@@ -62,6 +62,34 @@ html, body {
 	height: 15%;
 	background-color:orange;
 }
+
+.get-container {
+   text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 100%;
+	background-color: grey;
+	
+}
+
+
+.get-menu-button {
+	margin: 5% 5% 5% 5%;
+	height: 60%;
+	width:40%;
+	background-color:orange;
+}
+
+.get-menu-Annobutton {
+	margin: 5% 5% 5% 5%;
+	float:left;
+	width:90%;
+	height:45%
+	background-color:orange;
+}
+
+
 .log-in-container {
 	float: left;
 	text-align: center;
@@ -105,6 +133,18 @@ html, body {
 	clear:both;
 }
 
+.holds-container {
+	width: 100%;
+}
+
+.hold-container {
+	margin: 5%;
+	float: left;
+	height: 30%;
+	width: 90%;
+	background-color: yellow;
+}
+
 table.login {
 	width: 90%;
 	margin-left: auto;
@@ -128,5 +168,7 @@ p#main-menu {
 	font-size: medium;
 	font-weight:bold;
 }
+
+
 
 }
