@@ -1,0 +1,28 @@
+<DIV CLASS="header">
+	<p id="header">Financial Aid</p>
+</DIV>
+<DIV CLASS="financialAid-container">
+	<TABLE BORDER="1">
+		<TR>
+			<TH> AWARD DESCRIPTION
+			<TH> CATEGORY
+			<TH> OFFERED
+			<TH> ACCEPTED
+		</TR>
+		<!-- BEGIN REPEAT HERE-->
+		<TR ng-repeat="financialAid in financialAids">
+			<TD> {{financialAid.description}}
+			<TD> {{financialAid.category}}
+			<TD> {{financialAid.offered}}
+			<TD> {{financialAid.accepted}}
+		</TR>
+		<!-- END REPEAT HERE-->
+	</TABLE>
+	<TABLE BORDER="1" WIDTH="100%">
+		<TR>
+			<TD> <A HREF="">BACK</A>
+			<TD> <A HREF="">KEY</A>
+			<TD> <A HREF="">LOCATION</A>
+		</TR>
+	</TABLE>
+</DIV>

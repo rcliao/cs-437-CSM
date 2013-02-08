@@ -11,5 +11,6 @@ angular.module('csm', ['csm.services', 'ngCookies', 'csm.directives']).
 		when('/GET-Menu', {templateUrl: 'partials/GET-Menu.html',   controller: GETMenuCtrl}).
 		when('/GET-Holds', {templateUrl: 'partials/GET-Holds.html',   controller: GETHoldsCtrl}).
 		when('/grades', {templateUrl: 'partials/grades.html',   controller: GradesCtrl}).
+		when('/financialAid', {templateUrl: 'partials/financialAid.html',   controller: financialAidController}).
 		otherwise({redirectTo: '/main'});
 }]);

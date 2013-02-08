@@ -21,14 +21,14 @@ function AnnoCtrl($scope, Resources) {
 	$scope.announcements = Resources.query({collection: 'announcements'});
 }
 
-function AnnoNewCtrl(Resources, $routeParams, $scope) {   
+function AnnoNewCtrl(Resources, $routeParams, $scope) {
     $scope.announcement = new Resources();
     
     $scope.save = function () {
         Resources.save({collection: 'announcements'}, $scope.announcement, function (res) { if (res.ok === 1) { $location.path("/anno");}})
 		$scope.announcement.head = ''
 		$scope.announcement.content = ''
-    }
+    };
 }
 
 function LoginController ($scope, $http, $location, $rootScope, $cookieStore, AuthService) {
@@ -73,4 +73,21 @@ function LoginController ($scope, $http, $location, $rootScope, $cookieStore, Au
   );
   
   $scope.SelectedTerm;
+}
+
+function financialAidController($scope) {
+	$scope.financialAids = [
+	{
+		"description": "PELL GRANT F/W/SP",
+		"category": "Grant",
+		"offered": "1234.56",
+		"accepted": "1234.56"
+	},
+	{
+		"description": "BOSS Award",
+		"category": "Scholarship",
+		"offered": "13.77",
+		"accepted": "13.77"
+	}
+  ];
 }

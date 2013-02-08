@@ -193,4 +193,15 @@ div.grades-container table.gradesTable td {
 	background-color: darkgrey;
 }
 
+/* BEGIN OF MY DIVS */
+.financialAid-container {
+	margin: 5% 5% 5% 5%;
+	padding: 5%;
+	border: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+/* END OF MY DIVS */
+
 }
