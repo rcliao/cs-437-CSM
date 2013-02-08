@@ -1,7 +1,7 @@
 'use strict';
 
 // practice to add module for route control as store
-angular.module('csm', ['csm.services', 'ngCookies', 'csm.directives']).
+angular.module('csm', ['csm.services', 'ngCookies', 'ngSanitize', 'csm.directives']).
 	config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
 		when('/login', {templateUrl: 'partials/login.html',   controller: LoginController}).
@@ -12,5 +12,8 @@ angular.module('csm', ['csm.services', 'ngCookies', 'csm.directives']).
 		when('/GET-Holds', {templateUrl: 'partials/GET-Holds.html',   controller: GETHoldsCtrl}).
 		when('/grades', {templateUrl: 'partials/grades.html',   controller: GradesCtrl}).
 		when('/financialAid', {templateUrl: 'partials/financialAid.html',   controller: financialAidController}).
+		when('/email', {templateUrl: 'partials/mail.html',   controller: MailCtrl}).
+		when('/email/inbox', {templateUrl: 'partials/inbox.html', controller: InboxMailCtrl}).
+		when('/email/sent', {templateUrl: 'partials/inbox.html', controller: SentMailCtrl}).
 		otherwise({redirectTo: '/main'});
 }]);

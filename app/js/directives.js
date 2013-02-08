@@ -10,20 +10,30 @@ angular.module('csm.directives', []).
         //once Angular is started, remove class:
         //elem.removeClass('waiting-for-angular');
         
-        var login = elem.find('.login-container');
-        var main = elem.find('.content');
+        var login = elem.find('#login-container');
+        var main = elem.find('#content');
         
         login.hide();
         
         scope.$on('event:auth-loginRequired', function() {
-			console.log("login-required");
-            login.show();
-			main.hide();
+            login.slideDown('slow', function() {
+            main.hide();
+          });
         });
         scope.$on('event:auth-loginConfirmed', function() {
-          main.show();
-          login.hide();
+           main.show();
+          login.slideUp();
         });
       }
-    }
+    };
+  }).
+  directive('emailsHolder', function() {
+    return {
+      restrict: 'C',
+      link: function(scope, elem, attrs) {
+        var email = elem.find('#accordion');
+        console.log("email: " + email.html());
+        email.accordion({ active: 2, collapsible: true });
+      }
+    };
   });

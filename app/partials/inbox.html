@@ -1,0 +1,22 @@
+<div class="header">
+	<p id="header">Inbox</p>
+</div>
+<div class = "inbox-header">
+<a href = "#/email" style="text-align: right;">Back to Mailbox</a> Inbox Edit
+</div>
+<div class="emails-holder" ng-repeat="email in emails">
+	<div id="accordion">
+		<h3>
+		subject: {{email.subject}} </br>
+		from: {{email.from}}
+		</h3>
+		<div>
+			<p>
+			to: {{email.to}} </br>
+			date: {{email.date}} </br>
+			<div ng-bind-html-unsafe="email.body"> </div> </br>
+			</p>
+		</div>
+	</div>
+</div>
+<div class = "clear"> </div>

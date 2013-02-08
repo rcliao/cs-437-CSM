@@ -69,7 +69,7 @@ angular.module('csm.services', ['ngResource']).
 	authServices.loginConfirmed = function(username) {
 		$cookieStore.put("user", username);
 		$rootScope.$broadcast('event:auth-loginConfirmed');
-	}
+	};
 
 	return authServices;
 	}).
@@ -92,7 +92,7 @@ angular.module('csm.services', ['ngResource']).
  
       return function(promise) {
         return promise.then(success, error);
-      }
+      };
  
     }];
     $httpProvider.responseInterceptors.push(interceptor);
