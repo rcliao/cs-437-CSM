@@ -9,6 +9,14 @@ function MenuCtrl($scope) {
 
 }
 
+function GETMenuCtrl($scope) {
+}
+
+function GETHoldsCtrl($scope, Resources) {
+	$scope.holds = [{"from": "Library Fee", "content": "$5.00"},
+					{"from": "Writing Center", "content": "WPE"}];
+}
+
 function AnnoCtrl($scope, Resources) {
 	$scope.announcements = Resources.query({collection: 'announcements'});
 }
