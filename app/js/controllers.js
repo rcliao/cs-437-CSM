@@ -37,28 +37,40 @@ function LoginController ($scope, $http, $location, $rootScope, $cookieStore, Au
     $scope.login = function() {
       $http.post('auth/login').success(function() {
         AuthService.loginConfirmed($scope.username);
-      });
-    }
+     });
+  };
 	
 	$scope.$on('event:auth-loginConfirmed', function() {
          $scope.status = $cookieStore.get("user") + ' logged in ';
-    });
+  });
 	
 	$scope.$on('event:auth-loginRequired', function() {
          $scope.status = ' log in required ';
-    });
+ });
 	
 	$scope.logout = function() {
       $http.post('auth/logout').success(function() {
-	    $cookieStore.remove("user");
+      $cookieStore.remove("user");
         $scope.status = $cookieStore.get("user") + ' logged out ';
       });
-    }
+  };
 	
 	$scope.restrictedAction = function() {
       $http.get('data/protected').success(function(response) {
         // this piece of code will not be executed until user is authenticated
         $scope.something.push(response);
       });
+  };
+
+  function GradesCtrl($scope, Resources) {
+  $scope.grades = [{'term': 'Spring / 2013', 'values':{'class': 'CS 437', 'description': 'Senior Software Design', 'grade': 'A+'}},
+          {'term': 'Winter / 2013', 'values':{'class': 'CS 520', 'description': 'Senior Web Design', 'grade': 'S'}}];
+          
+  $scope.terms = Resources.query({collection: 'terms'}, 
+    function(res) {
+      $scope.SelectedTerm = res[0];
     }
+  );
+  
+  $scope.SelectedTerm;
 }
