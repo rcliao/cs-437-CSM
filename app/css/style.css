@@ -133,6 +133,18 @@ html, body {
 	clear:both;
 }
 
+.holds-container {
+	width: 100%;
+}
+
+.hold-container {
+	margin: 5%;
+	float: left;
+	height: 30%;
+	width: 90%;
+	background-color: yellow;
+}
+
 table.login {
 	width: 90%;
 	margin-left: auto;

@@ -1,18 +1,13 @@
 
-	<div class="get-container">
-	<div align="center">
-		<div class="header">
-			<p id="header">Holds</p>
-		</div>
-		<br>
-		</br>
-		<div class = "get-menu-button">
-			<p id = "get-menu">Library Fee: $5.00</p>
-		</div>
-		<div class = "get-menu-button">
-			<p id = "get-menu">Testing Centre: WPE</p>
-		</div>
-		
-		</div>
-		<div class = "clear"> </div>
+	<div class="header">
+		<p id="header">Holds</p>
 	</div>
+	<div class="holds-container" ng-repeat="hold in holds">
+		<div class = "hold-container">
+			<h3>{{hold.from}}:</h3> 
+			{{hold.content}}
+		</div>
+	</div>
+	
+	</div>
+	<div class = "clear"> </div>
