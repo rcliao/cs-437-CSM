@@ -98,3 +98,7 @@ function MailDetailCtrl($scope, $routeParams, Resources) {
 function MailSendCtrl($scope, $routeParams, Resources) {
 	
 }
+
+function GeneralSchCtrl($scope, $http) {
+	$scope.courses = $http.get('sampledata/courses.json');
+}

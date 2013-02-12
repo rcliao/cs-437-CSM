@@ -242,4 +242,13 @@ footer div#footer-container {
 
 .placeholder { color: #aaa; }
 
+#catelog-holder table th,td {
+	text-align: center;
+	border: 1px solid black;
+}
+
+#catelog-holder table th {
+	font-weight: bold;
+}
+
 }

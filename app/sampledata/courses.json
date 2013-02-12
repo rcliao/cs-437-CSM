@@ -6,8 +6,9 @@
 	"number": "101",
     "subject": "CS",
 	"capacity": 30,
-    "students":" ",
-	"units": 2
+    "students":"30",
+	"units": 2,
+    "professor": "Raj Pamula"
 },
 {	"term":"Winter 2013 ", 
     "_id": 2,
@@ -15,8 +16,9 @@
 	"number": "120",
     "subject": "CS",
 	"capacity": 30,
-    "students":" ", 
-	"units": 3
+    "students":"25", 
+	"units": 3,
+    "professor": "John Hurley"
 },
 
 {	
@@ -26,8 +28,9 @@
 	"number": "122",
     "subject": "CS",
 	"capacity": 30,
-    "students":"  ",
-	"units": 2
+    "students":"29",
+	"units": 2,
+    "professor": "John Hurley"
 },
 
 {	
@@ -37,8 +40,9 @@
 	"number": "160",
     "subject": "CS",
 	"capacity": 30,
-    "students":"  ",
-	"units": 3
+    "students":"29",
+	"units": 3,
+    "professor": "Faculty"
 },
 {	
 	"term":"Winter 2013 ",
@@ -47,8 +51,9 @@
 	"number": "190",
     "subject": "CS",
 	"capacity": 30,
-    "students":" ",
-	"units": 2
+    "students":"5",
+	"units": 2,
+    "professor": "Faculty"
 },
 
 {
@@ -58,8 +63,9 @@
 	"number": "201",
     "subject": "CS",
 	"capacity": 30,
-    "students":" ", 
-	"units": 5
+    "students":"26", 
+	"units": 5,
+    "professor": "Keenan Knaur"
 },
 
 {
@@ -69,8 +75,9 @@
 	"number": "202",
     "subject": "CS",
 	"capacity": 30,
-    "students":" ", 
-	"units": 5
+    "students":"25", 
+	"units": 5,
+    "professor": "John Tran"
 },
 
 {
@@ -80,8 +87,9 @@
 	"number": "203",
     "subject": "CS",
 	"capacity": 30,
-    "students":" ", 
-	"units": 5
+    "students":"3", 
+	"units": 5,
+    "professor": "Jiang Guo"
 },
 
 {
@@ -91,8 +99,9 @@
 	"number": "242",
     "subject": "CS",
 	"capacity": 30,
-    "students":" ", 
-	"units": 4
+    "students":"3", 
+	"units": 4,
+    "professor": "Vladimir Akis"
 },
 
 {
@@ -102,8 +111,9 @@
 	"number": "245",
     "subject": "CS",
 	"capacity": 30,
-    "students":" ", 
-	"units": 4
+    "students":"3", 
+	"units": 4,
+    "professor": "Parvaneh Ghaforyfard"
 },
 
 {
@@ -113,8 +123,9 @@
 	"number": "290",
     "subject": "CS",
 	"capacity": 30,
-    "students":" ", 
-	"units": 2
+    "students":"3", 
+	"units": 2,
+    "professor": "Keenan Knaur"
 },
 
 {
@@ -124,8 +135,9 @@
 	"number": "301",
     "subject": "CS",
 	"capacity": 30,
-    "students":" ", 
-	"units": 1
+    "students":"3", 
+	"units": 1,
+    "professor": "Russ Abbott"
 },
 
 {
@@ -135,8 +147,9 @@
 	"number": "312",
     "subject": "CS",
 	"capacity": 30,
-    "students":" ", 
-	"units": 4
+    "students":"3", 
+	"units": 4,
+    "professor": "Behzad Parviz"
 },
 
 {
@@ -146,8 +159,9 @@
 	"number": "320",
     "subject": "CS",
 	"capacity": 30,
-    "students":" ", 
-	"units": 4
+    "students":"3", 
+	"units": 4,
+    "professor": "Chengyu Sun"
 },
 
 {
@@ -157,8 +171,9 @@
     "number": "332F",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 2
+    "students": "3",
+    "units": 2,
+    "professor": "Russ Abbott"
 },
 
 {
@@ -168,8 +183,9 @@
     "number": "332L",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 2
+    "students": "3",
+    "units": 2,
+    "professor": "Jose Macias"
 },
 
 {
@@ -179,8 +195,9 @@
     "number": "332C",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 2
+    "students": "3",
+    "units": 2,
+    "professor": "Sam Stokes"
 },
 
 {
@@ -190,8 +207,9 @@
     "number": "337",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 3
+    "students": "3",
+    "units": 3,
+    "professor": "Jose Macias"
 },
 
 {
@@ -201,8 +219,9 @@
     "number": "340",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -212,8 +231,9 @@
     "number": "342",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -223,8 +243,9 @@
     "number": "345",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -234,8 +255,9 @@
     "number": "370",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -245,8 +267,9 @@
     "number": "386",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -256,8 +279,9 @@
     "number": "422",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -267,8 +291,9 @@
     "number": "437",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 5
+    "students": "3",
+    "units": 5,
+    "professor": "Faculty"
 },
 
 {
@@ -278,8 +303,9 @@
     "number": "440",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -289,8 +315,9 @@
     "number": "447",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -300,8 +327,9 @@
     "number": "450",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 5
+    "students": "3",
+    "units": 5,
+    "professor": "Faculty"
 },
 
 {
@@ -311,8 +339,9 @@
     "number": "451",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -322,8 +351,9 @@
     "number": "454",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -333,8 +363,9 @@
     "number": "460",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -344,8 +375,9 @@
     "number": "461",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -355,8 +387,9 @@
     "number": "470",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -366,8 +399,9 @@
     "number": "480",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -377,8 +411,9 @@
     "number": "486",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -388,8 +423,9 @@
     "number": "488",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 },
 
 {
@@ -399,8 +435,9 @@
     "number": "490",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 2
+    "students": "3",
+    "units": 2,
+    "professor": "Faculty"
 },
 
 {
@@ -410,8 +447,9 @@
     "number": "496A",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 2
+    "students": "3",
+    "units": 2,
+    "professor": "Faculty"
 },
 
 {
@@ -421,8 +459,9 @@
     "number": "496B",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 2
+    "students": "3",
+    "units": 2,
+    "professor": "Faculty"
 },
 
 {
@@ -432,8 +471,9 @@
     "number": "496C",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 2
+    "students": "3",
+    "units": 2,
+    "professor": "Faculty"
 },
 
 {
@@ -443,8 +483,9 @@
     "number": "499",
     "subject": "CS",
     "capacity": 30,
-    "students": " ",
-    "units": 4
+    "students": "3",
+    "units": 4,
+    "professor": "Faculty"
 }
 
 ]

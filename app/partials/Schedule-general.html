@@ -1,0 +1,30 @@
+<div class="get-container">
+	<div align="center">
+		<div class="header">
+			<p id="header">General Schedule</p>
+		</div>
+		<div class="catelog-holder">
+			<table>
+				<thead>
+					<tr>
+						<th>term</th>
+						<th>subject</th>
+						<th>capacity</th>
+						<th>sudents</th>
+						<th>units</th>
+					</tr>
+				</thead>
+				<tbody ng-repeat="course in courses.data">
+					<tr>
+						<td>{{course.term}}</td>
+						<td>{{course.subject}} {{course.number}}</td>
+						<td>{{course.capacity}}</td>
+						<td>{{course.students}}</td>
+						<td>{{course.units}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class = "clear"> </div>
+</div>
