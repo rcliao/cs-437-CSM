@@ -79,6 +79,7 @@ var mailJSONs = [];
 
 function inboxOpen() {
   openInbox(function(err, mailbox) {
+  mailJSONs = [];
   if (err) die(err);
   imap.search([ 'ALL', ['SINCE', 'Febury 7, 2013'] ], function(err, results) {
     if (err) die(err);

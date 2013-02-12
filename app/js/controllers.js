@@ -94,3 +94,7 @@ function MailDetailCtrl($scope, $routeParams, Resources) {
 
 	$scope.email = Resources.get({collection: 'inbox', _id: $scope.emailID});
 }
+
+function MailSendCtrl($scope, $routeParams, Resources) {
+	
+}

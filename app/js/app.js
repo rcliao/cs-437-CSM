@@ -15,6 +15,9 @@ angular.module('csm', ['csm.services', 'ngCookies', 'ngSanitize', 'csm.directive
 		when('/email', {templateUrl: 'partials/mail.html',   controller: MailCtrl}).
 		when('/email/inbox', {templateUrl: 'partials/inbox.html', controller: InboxMailCtrl}).
 		when('/email/inbox/:emailID', {templateUrl: 'partials/mail-detail.html', controller: MailDetailCtrl}).
+		when('/email/sendMail', {templateUrl: 'partials/mail-send.html', controller: MailSendCtrl}).
 		when('/email/sent', {templateUrl: 'partials/inbox.html', controller: SentMailCtrl}).
+		when('/Schedule', {templateUrl: 'partials/Schedule-menu.html', controller: MainController}).
+		when('/Schedule/Weekly', {templateUrl: 'partials/Schedule-weekly.html', controller: MainController}).
 		otherwise({redirectTo: '/main'});
 }]);

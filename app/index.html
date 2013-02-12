@@ -4,6 +4,9 @@
 
 <link rel="stylesheet" media="screen and (max-width: 850px)" href="css/style.css" type="text/css" />
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+<link rel='stylesheet' type='text/css' href='lib/fullcalendar/fullcalendar.css' />
+<link rel='stylesheet' type='text/css' href='lib/fullcalendar/fullcalendar.print.css' media='print' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <script src="lib/jquery-1.9.0.js"></script>
@@ -14,11 +17,14 @@
 <script src="lib/angular/angular-cookies.js"></script>
 <script src="lib/angular/angular-resource.js"></script>
 <script src="lib/angular/angular-sanitize.min.js"></script>
+<script type='text/javascript' src='lib/fullcalendar/fullcalendar.min.js'></script>
 
 <script src="js/services.js"></script>
 <script src="js/directives.js"></script>
 <script src="js/controllers.js"></script>
 <script src="js/app.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/calendar.js"></script>
 
 </head>
 <body ng-controller = "MainController" class="auth-demo-application">
@@ -48,6 +54,9 @@
 	<footer>
 		<ng-switch on="$route.current.templateUrl">
 			<ng-include ng-switch-when="partials/mail-detail.html" src="'partials/mailFooter.html'"></ng-include>
+			<ng-include ng-switch-when="partials/mail.html" src="'partials/mailFooter.html'"></ng-include>
+			<ng-include ng-switch-when="partials/inbox.html" src="'partials/mailFooter.html'"></ng-include>
+			<ng-include ng-switch-when="partials/mail-send.html" src="'partials/mailFooter.html'"></ng-include>
 			<ng-include ng-switch-default src="'footer.html'"></ng-include>
 		</ng-switch>
 	</footer>
