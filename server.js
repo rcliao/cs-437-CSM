@@ -18,8 +18,8 @@ var Imap = require('imap'),
     inspect = require('util').inspect;
 
 var imap = new Imap({
-  user: 'user@gmail.com',
-  password: 'password',
+  user: 'rcliao01@gmail.com',
+  password: '1nfynite',
   host: 'imap.gmail.com',
   port: 993,
   secure: true
@@ -84,7 +84,6 @@ function inboxOpen() {
     if (err) die(err);
     imap.fetch(results,
       { headers: ['from', 'to', 'subject', 'date'],
-        body: true,
         cb: function(fetch) {
           fetch.on('message', function(msg) {
             var mailJSON = {};
@@ -97,19 +96,15 @@ function inboxOpen() {
               mailJSON.subject = hdrs.subject;
               console.log('Headers for no. ' + msg.seqno + ': ' + show(hdrs));
             });
-            msg.on('data', function(chunk) {
-              body += chunk.toString('utf8');
-            });
             msg.on('end', function() {
               console.log('Finished message no. ' + msg.seqno);
               mailJSON.flags = msg.flags;
               mailJSON.date = msg.date;
-              mailJSON.body = body;
+              mailJSON.uid = msg.uid;
               mailJSONs.push(mailJSON);
               console.log('UID: ' + msg.uid);
               console.log('Flags: ' + msg.flags);
               console.log('Date: ' + msg.date);
-              console.log('Body: ' + body);
             });
           });
         }
@@ -137,7 +132,6 @@ function sentOpen() {
           fetch.on('message', function(msg) {
             var mailJSON = {};
             console.log('Saw message no. ' + msg.seqno);
-            var body = '';
             msg.on('headers', function(hdrs) {
               mailJSON.from = hdrs.from;
               mailJSON.to = hdrs.to;
@@ -145,19 +139,60 @@ function sentOpen() {
               mailJSON.subject = hdrs.subject;
               console.log('Headers for no. ' + msg.seqno + ': ' + show(hdrs));
             });
+            msg.on('end', function() {
+              console.log('Finished message no. ' + msg.seqno);
+              mailJSON.flags = msg.flags;
+              mailJSON.date = msg.date;
+              sentJSONs.push(mailJSON);
+              console.log('UID: ' + msg.uid);
+              console.log('Flags: ' + msg.flags);
+              console.log('Date: ' + msg.date);
+            });
+          });
+        }
+      }, function(err) {
+        if (err) throw err;
+        console.log('Done fetching all messages!');
+        imap.logout();
+      }
+    );
+  });
+  });
+}
+
+var mailDetailJSON = {};
+
+function inboxOpenOne(emailID) {
+  openInbox(function(err, mailbox) {
+  if (err) die(err);
+  imap.search([ 'ALL', ['SINCE', 'Febury 7, 2013'], ['UID', emailID] ], function(err, results) {
+    if (err) die(err);
+    imap.fetch(results,
+      { headers: ['from', 'to', 'subject', 'date'],
+        body: true,
+        cb: function(fetch) {
+          fetch.on('message', function(msg) {
+            console.log('Saw message no. ' + msg.seqno);
+            var body = '';
+            msg.on('headers', function(hdrs) {
+              mailDetailJSON.from = hdrs.from;
+              mailDetailJSON.to = hdrs.to;
+              mailDetailJSON.date = hdrs.date;
+              mailDetailJSON.subject = hdrs.subject;
+              console.log('Headers for no. ' + msg.seqno + ': ' + show(hdrs));
+            });
             msg.on('data', function(chunk) {
               body += chunk.toString('utf8');
             });
             msg.on('end', function() {
               console.log('Finished message no. ' + msg.seqno);
-              mailJSON.flags = msg.flags;
-              mailJSON.date = msg.date;
-              mailJSON.body = body;
-              sentJSONs.push(mailJSON);
+              mailDetailJSON.flags = msg.flags;
+              mailDetailJSON.date = msg.date;
+              mailDetailJSON.uid = msg.uid;
+              mailDetailJSON.body = show(body);
               console.log('UID: ' + msg.uid);
               console.log('Flags: ' + msg.flags);
               console.log('Date: ' + msg.date);
-              console.log('Body: ' + body);
             });
           });
         }
@@ -204,6 +239,13 @@ app.get('/api/inbox', function(req, res) {
   res.contentType('application/json');
   inboxOpen();
   res.send(mailJSONs);
+});
+
+app.get('/api/inbox/:emailID', function(req, res) {
+  res.contentType('application/json');
+  console.log(req.params.emailID);
+  inboxOpenOne(req.params.emailID);
+  res.send(mailDetailJSON);
 });
 
 // Query

@@ -21,7 +21,7 @@
 <script src="js/app.js"></script>
 
 </head>
-<body ng-controller = "LoginController" class="auth-demo-application">
+<body ng-controller = "MainController" class="auth-demo-application">
 	<div class="main-container">
 	<div id="login-container">
 	<form ng-submit="login()">
@@ -40,15 +40,16 @@
 	</table>
 	</form>
 	</div>
-	<div id = "content" ng:controller="LoginController">
+	<div id = "content" ng:controller="MainController">
 		<!-- set up the routing -->
 		<ng-view>
 	</div>
 	</div>
 	<footer>
-		<div id="footer-container">
-  			<input type="image" src="img/back-button.png" onClick="history.go(-1);return true;">
-  		</div>
+		<ng-switch on="$route.current.templateUrl">
+			<ng-include ng-switch-when="partials/mail-detail.html" src="'partials/mailFooter.html'"></ng-include>
+			<ng-include ng-switch-default src="'footer.html'"></ng-include>
+		</ng-switch>
 	</footer>
 </body>
 </html>

@@ -21,17 +21,19 @@ function AnnoCtrl($scope, Resources) {
 	$scope.announcements = Resources.query({collection: 'announcements'});
 }
 
-function AnnoNewCtrl(Resources, $routeParams, $scope) {
+function AnnoNewCtrl(Resources, $routeParams, $scope, $location) {
     $scope.announcement = new Resources();
     
     $scope.save = function () {
-        Resources.save({collection: 'announcements'}, $scope.announcement, function (res) { if (res.ok === 1) { $location.path("/anno");}})
-		$scope.announcement.head = ''
-		$scope.announcement.content = ''
+        Resources.save({collection: 'announcements'}, $scope.announcement, function (res) { if (res.ok === 1) { $location.path("/anno");}});
+		$scope.announcement.head = '';
+		$scope.announcement.content = '';
     };
 }
 
-function LoginController ($scope, $http, $location, $rootScope, $cookieStore, AuthService) {
+function MainController ($scope, $route, $http, $location, $rootScope, $cookieStore, AuthService) {
+    $scope.$route = $route;
+
     $scope.login = function() {
       $http.post('auth/login', {"username": $scope.username, "password": $scope.password}).success(function() {
         AuthService.loginConfirmed($scope.username);
@@ -41,7 +43,7 @@ function LoginController ($scope, $http, $location, $rootScope, $cookieStore, Au
 	$scope.logout = function() {
       $http.post('auth/logout').success(function() {
         $scope.status ='guest';
-		    $cookieStore.remove("user");
+			$cookieStore.remove("user");
       });
     };
 }
@@ -85,4 +87,10 @@ function InboxMailCtrl($scope, $cookieStore, Resources) {
 
 function SentMailCtrl($scope, $cookieStore, Resources) {
   $scope.emails = Resources.query({collection: 'sent'});
+}
+
+function MailDetailCtrl($scope, $routeParams, Resources) {
+	$scope.emailID = $routeParams.emailID;
+
+	$scope.email = Resources.get({collection: 'inbox', _id: $scope.emailID});
 }

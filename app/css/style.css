@@ -207,7 +207,7 @@ div.grades-container table.gradesTable td {
 	background-color: darkgrey;
 }
 
-/* BEGIN OF MY DIVS */
+/* BEGIN OF Financial aid DIVS */
 .financialAid-container {
 	margin: 5% 5% 5% 5%;
 	padding: 5%;
@@ -216,14 +216,19 @@ div.grades-container table.gradesTable td {
 	height: 100%;
 	
 }
-/* END OF MY DIVS */
+/* END OF Financial aid DIVS */
 
 footer {
+	position: fixed;
 	height: 10%;
 	width: 100%;
 	background-color: yellow;
 	margin: 0;
 	padding: 0;
+}
+
+.content {
+	height: 70%;
 }
 
 footer div#footer-container {
