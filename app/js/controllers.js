@@ -50,7 +50,10 @@ function MainController ($scope, $route, $http, $location, $rootScope, $cookieSt
 
   function GradesCtrl($scope, Resources) {
   $scope.grades = [{'term': 'Spring / 2013', 'values':{'class': 'CS 437', 'description': 'Senior Software Design', 'grade': 'A+'}},
-          {'term': 'Winter / 2013', 'values':{'class': 'CS 520', 'description': 'Senior Web Design', 'grade': 'S'}}];
+					{'term': 'Spring / 2013', 'values':{'class': 'CS 320', 'description': 'Web and Internet Programming', 'grade': 'A'}}
+					{'term': 'Fall / 2013', 'values':{'class': 'CS 470', 'description': 'Computer Networking Protocols', 'grade': 'A+'}},
+					{'term': 'Winter / 2013', 'values':{'class': 'CS 312', 'description': 'Data Structures and Algorithms', 'grade': 'B'}}];
+					{'term': 'Winter / 2013', 'values':{'class': 'CS 520', 'description': 'Advanced Web Programming', 'grade': 'B'}}];
           
   $scope.terms = [{"key": "key1", "value": "Winter / 2013"},
           {"key": "key2", "value": "Spring / 2013"},
