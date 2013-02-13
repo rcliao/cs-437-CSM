@@ -2,6 +2,8 @@
 	<div align="center">
 		<div class="header">
 			<p id="header">General Schedule</p>
+			<input type="text" style="float: right;" ng-model="query" placeholder="search"/>
+			<div class = "clear"></div>
 		</div>
 		<div class="catelog-holder">
 			<table>
@@ -14,10 +16,10 @@
 						<th>units</th>
 					</tr>
 				</thead>
-				<tbody ng-repeat="course in courses.data">
+				<tbody ng-repeat="course in courses | filter:query">
 					<tr>
 						<td>{{course.term}}</td>
-						<td>{{course.subject}} {{course.number}}</td>
+						<td>{{course.subject}}</td>
 						<td>{{course.capacity}}</td>
 						<td>{{course.students}}</td>
 						<td>{{course.units}}</td>

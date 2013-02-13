@@ -100,5 +100,13 @@ function MailSendCtrl($scope, $routeParams, Resources) {
 }
 
 function GeneralSchCtrl($scope, $http) {
-	$scope.courses = $http.get('sampledata/courses.json');
+	$http.get('sampledata/courses.json').success(function(data) {
+		$scope.courses = data;
+	});
+}
+
+function GMapCtrl($scope, $http) {
+	$http.get('data/maps').success(function(data) {
+		$scope.map = data;
+	});
 }
