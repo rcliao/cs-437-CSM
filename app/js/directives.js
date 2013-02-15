@@ -48,28 +48,28 @@ angular.module('csm.directives', []).
           editable: true,
           events: [
             {
-              title: 'All Day Event',
+              title: 'Orientation with CS Senior Design Project',
               start: new Date(y, m, 1)
             },
             {
-              title: 'Long Event',
+              title: 'CS 470',
               start: new Date(y, m, d-5),
               end: new Date(y, m, d-2)
             },
             {
               id: 999,
-              title: 'Repeating Event',
+              title: 'CS 450',
               start: new Date(y, m, d-3, 16, 0),
               allDay: false
             },
             {
               id: 999,
-              title: 'Repeating Event',
+              title: 'CS 320',
               start: new Date(y, m, d+4, 16, 0),
               allDay: false
             },
             {
-              title: 'Meeting',
+              title: 'CS Senior Design Meeting',
               start: new Date(y, m, d, 10, 30),
               allDay: false
             },
