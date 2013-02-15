@@ -105,6 +105,10 @@ function GeneralSchCtrl($scope, $http) {
 	});
 }
 
+function ParkingMenuCtrl($scope, $http) {
+	
+}
+
 function GMapCtrl($scope, $http) {
 	$http.get('data/maps').success(function(data) {
 		$scope.map = data;

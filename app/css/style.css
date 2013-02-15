@@ -251,4 +251,24 @@ footer div#footer-container {
 	font-weight: bold;
 }
 
+.parking-container {
+	width: 25%;
+	float: right;
+	margin: 3%;
+	background-color: white;
+	color: black;
+	border-style: solid;
+	border-width: 1;
+}
+
+.parking-sign {
+	width: 25%;
+	float: left;
+	margin: 3%;
+	background-color: white;
+	color: black;
+	border-style: solid;
+	border-width: 1;
+}
+
 }

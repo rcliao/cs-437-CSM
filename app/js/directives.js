@@ -80,9 +80,9 @@ angular.module('csm.directives', []).
               allDay: false
             },
             {
-              title: 'Birthday Party',
-              start: new Date(y, m, d+1, 19, 0),
-              end: new Date(y, m, d+1, 22, 30),
+              title: 'CS 437',
+              start: new Date(y, m, d, 18, 10),
+              end: new Date(y, m, d, 22, 0),
               allDay: false
             },
             {
