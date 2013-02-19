@@ -2,9 +2,6 @@ var express = require('express'),
     app = express.createServer(),
     db = require('mongojs').connect('csm');
 
-var MailParser = require("mailparser").MailParser,
-    mailparser = new MailParser();
-
 var gm = require('googlemaps');
 var util = require('util');
     
@@ -17,12 +14,20 @@ app.configure(function () {
 	app.use(express.errorHandler({dumpExceptions: true, showStack: true, showMessage: true}));
 });
 
+var email   = require("./node_modules/emailjs/email");
+var emailServer  = email.server.connect({
+   user: 'cs437test@gmail.com',
+   password: 'cs437email',
+   host:    "smtp.gmail.com",
+   ssl:     true
+});
+
 var Imap = require('imap'),
     inspect = require('util').inspect;
 
 var imap = new Imap({
-  user: 'rcliao01@gmail.com',
-  password: '1nfynite',
+  user: 'cs437test@gmail.com',
+  password: 'cs437email',
   host: 'imap.gmail.com',
   port: 993,
   secure: true
@@ -210,26 +215,6 @@ function inboxOpenOne(emailID) {
   });
 }
 
-markers = [
-    { 'location': '5151 State University Dr, Los Angeles, CA' }
-];
-
-styles = [
-    { 'feature': 'road', 'element': 'all', 'rules':
-        { 'hue': '0x00ff00' }
-    }
-];
-
-paths = [
-    { 'color': '0x0000ff', 'weight': '5', 'points':
-        [ '34.090170, -118.141990', '34.091520, -118.1420',
-          '34.09154000000001, -118.134620', '34.091520, -118.1420',
-          '34.073550, -118.134510', '34.064090, -118.159760',
-          '34.06142000000001, -118.165070', '34.062380, -118.171430',
-          '34.063150, -118.171620', '34.06337000000001, -118.170510' ]
-    }
-];
-
 function setImap() {
 
 }
@@ -270,6 +255,11 @@ app.get('/api/inbox/:emailID', function(req, res) {
   console.log(req.params.emailID);
   inboxOpenOne(req.params.emailID);
   res.send(mailDetailJSON);
+});
+
+app.post('/api/email/sendMail', function(req, res) {
+  console.log(req.body);
+  emailServer.send(req.body);
 });
 
 app.get('/data/maps', function(req, res) {

@@ -8,9 +8,12 @@
 	<input type="text" ng-model="email.to" placeholder="To">
 </div>
 <div class="email-container">
-	<input type="text" ng-model="emqil.subject" placeholder="Subject">
+	<input type="text" ng-model="email.subject" placeholder="Subject">
 </div>
 <div class="email-container">
-	<textarea rows="10" ng-model="emqil.body" placeholder="Body">
+	<textarea rows="10" ng-model="email.text" placeholder="Body"></textarea>
+</div>
+<div class="email-container">
+	<button ng-click="sendEmail()">Send Mail</button>
 </div>
 <div class = "clear"> </div>
