@@ -83,7 +83,16 @@ function openSent(cb) {
   });
 }
 
+function openTrash(cb) {
+  imap.connect(function(err) {
+    if (err) die(err);
+    imap.openBox('[Gmail]/Trash', true, cb);
+  });
+}
+
+var sentJSONs = [];
 var mailJSONs = [];
+var trashJSONs = [];
 
 function inboxOpen() {
   openInbox(function(err, mailbox) {
@@ -127,8 +136,6 @@ function inboxOpen() {
   });
 }
 
-var sentJSONs = [];
-
 function sentOpen() {
  openSent(function(err, mailbox) {
   if (err) die(err);
@@ -153,6 +160,46 @@ function sentOpen() {
               mailJSON.flags = msg.flags;
               mailJSON.date = msg.date;
               sentJSONs.push(mailJSON);
+              console.log('UID: ' + msg.uid);
+              console.log('Flags: ' + msg.flags);
+              console.log('Date: ' + msg.date);
+            });
+          });
+        }
+      }, function(err) {
+        if (err) throw err;
+        console.log('Done fetching all messages!');
+        imap.logout();
+      }
+    );
+  });
+  });
+}
+
+function trashOpen() {
+ openTrash(function(err, mailbox) {
+  if (err) die(err);
+  imap.search([ 'ALL', ['SINCE', 'Febury 5, 2013'] ], function(err, results) {
+    if (err) die(err);
+    imap.fetch(results,
+      { headers: ['from', 'to', 'subject', 'date'],
+        body: true,
+        cb: function(fetch) {
+          fetch.on('message', function(msg) {
+            var trashJSON = {};
+            console.log('Saw message no. ' + msg.seqno);
+            msg.on('headers', function(hdrs) {
+              trashJSON.from = hdrs.from;
+              trashJSON.to = hdrs.to;
+              trashJSON.date = hdrs.date;
+              trashJSON.subject = hdrs.subject;
+              console.log('Headers for no. ' + msg.seqno + ': ' + show(hdrs));
+            });
+            msg.on('end', function() {
+              console.log('Finished message no. ' + msg.seqno);
+              trashJSON.flags = msg.flags;
+              trashJSON.date = msg.date;
+              trashJSONs.push(trashJSON);
               console.log('UID: ' + msg.uid);
               console.log('Flags: ' + msg.flags);
               console.log('Date: ' + msg.date);
@@ -250,6 +297,12 @@ app.get('/api/inbox', function(req, res) {
   res.send(mailJSONs);
 });
 
+app.get('/api/trash', function(req, res) {
+  res.contentType('application/json');
+  trashOpen();
+  res.send(trashJSONs);
+});
+
 app.get('/api/inbox/:emailID', function(req, res) {
   res.contentType('application/json');
   console.log(req.params.emailID);
@@ -260,6 +313,17 @@ app.get('/api/inbox/:emailID', function(req, res) {
 app.post('/api/email/sendMail', function(req, res) {
   console.log(req.body);
   emailServer.send(req.body);
+});
+
+app.get('/api/emailcount/inbox', function(req, res) {
+  res.contentType('application/json');
+  imap.connect(function(err) {
+    if (err) die(err);
+    imap.status('INBOX', function(err, box){
+      res.send(JSON.stringify(box.messages.unseen));
+      imap.logout();
+    });
+  });
 });
 
 app.get('/data/maps', function(req, res) {

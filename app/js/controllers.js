@@ -5,8 +5,8 @@
 function MainCtrl($scope) {
 }
 
-function MenuCtrl($scope) {
-
+function MenuCtrl($scope, Resources) {
+	$scope.newMail = Resources.get({collection: 'emailcount', _id: 'inbox'});
 }
 
 function GETMenuCtrl($scope) {
@@ -89,12 +89,19 @@ function MailCtrl($scope, Resources) {
 }
 
 function InboxMailCtrl($scope, $cookieStore, Resources) {
+	$scope.title = 'Inbox';
 	$scope.username = $cookieStore.get("user");
 	$scope.emails = Resources.query({collection: 'inbox'});
 }
 
 function SentMailCtrl($scope, $cookieStore, Resources) {
-  $scope.emails = Resources.query({collection: 'sent'});
+	$scope.title = 'Sent';
+	$scope.emails = Resources.query({collection: 'sent'});
+}
+
+function TrashMailCtrl($scope, $cookieStore, Resources) {
+	$scope.title = 'Trash';
+	$scope.emails = Resources.query({collection: 'trash'});
 }
 
 function MailDetailCtrl($scope, $routeParams, Resources) {
@@ -104,7 +111,7 @@ function MailDetailCtrl($scope, $routeParams, Resources) {
 }
 
 function MailSendCtrl($scope, $routeParams, Resources) {
-	$scope.email = {'from':"rcliao01@gmail.com"};
+	$scope.email = {'from':"cs437test@gmail.com"};
 	
 	$scope.sendEmail = function() {
 		Resources.save({collection:'email', _id:'sendMail'}, $scope.email);
@@ -118,13 +125,10 @@ function GeneralSchCtrl($scope, $http) {
 }
 
 function ParkingMenuCtrl($scope, $http) {
-	$http.get('sampledata/parkingStructure.json').success(function(data) {
-		$scope.parkings = data;
-	});
+	$scope.parkings = [
+	{'name':'Lot 2', 'sign': '$ M P H', 'space':6,'capacity':30}, {'name':'Lot 3', 'sign': '$ M P S H', 'space':9,'capacity':50}, {'name':'Lot 7', 'sign': '$ M P H', 'space':20,'capacity':40}, {'name':'Lot 10', 'sign': '$ P H', 'space':7,'capacity':50}
+	];
 }
 
 function GMapCtrl($scope, $http) {
-	$http.get('data/maps').success(function(data) {
-		$scope.map = data;
-	});
 }

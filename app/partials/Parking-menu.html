@@ -5,19 +5,16 @@
 		</div>
 		<br>
 		</br>
+		<div ng-repeat="parking in parkings">
 		<a href = "#/Schedule/General">
 			<div class = "main-menu-Annobutton">
-				<p>Lot 2</p>
-				<div class="parking-sign">P $ *</div>
-				<div class="parking-container">3/10</div>
+				<p>{{parking.name}}</p>
+				<div class="parking-sign">{{parking.sign}}</div>
+				<div class="parking-container">{{parking.space}}/{{parking.capacity}}</div>
 				<div class="clear"></div>
 			</div>
 		</a>
-		<a href = "#/Schedule/Weekly">
-			<div class = "main-menu-Annobutton">
-				<p id = "get-menu">Weekly</p>
-			</div>
-		</a>
+		</div>
 		
 	</div>
 	<div class = "clear"> </div>
