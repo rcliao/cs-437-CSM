@@ -1,542 +1,542 @@
 [
       {
             "_id" : 100	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 0,
             "permitType" : "Student",
             "handicap" : 1,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 101	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 1,
             "permitType" : "Student",
             "handicap" : 1,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 102	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 2,
             "permitType" : "Faculty",
             "handicap" : 1,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Taken"
       },
       {
             "_id" : 103	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 3,
             "permitType" : "Faculty",
             "handicap" : 1,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Taken"
       },
       {
             "_id" : 104	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 4,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Taken"
       },
       {
             "_id" : 105	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 5,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 106	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 6,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Taken"
       },
       {
             "_id" : 107	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 7,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 108	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 8,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Taken"
       },
       {
             "_id" : 109	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 9,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Taken"
       },
       {
             "_id" : 110	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 10,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Taken"
       },
       {
             "_id" : 111	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 11,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Taken"
       },
       {
             "_id" : 112	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 12,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Taken"
       },
       {
             "_id" : 113	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 13,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 114	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 14,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Taken"
       },
       {
             "_id" : 115	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 15,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Taken"
       },
       {
             "_id" : 116	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 16,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 117	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 17,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Taken"
       },
       {
             "_id" : 118	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 18,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Taken"
       },
       {
             "_id" : 119	,
-            "lotNumber" : 1,
+            "lotNumber" : "p1",
             "spaceNumber" : 19,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 200	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 0,
             "permitType" : "Student",
             "handicap" : 1,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 201	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 1,
             "permitType" : "Student",
             "handicap" : 1,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 202	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 2,
             "permitType" : "Faculty",
             "handicap" : 1,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 203	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 3,
             "permitType" : "Faculty",
             "handicap" : 1,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 204	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 4,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 205	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 5,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 206	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 6,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 207	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 7,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 208	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 8,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 209	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 9,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 210	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 10,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 211	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 11,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 212	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 12,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 213	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 13,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 214	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 14,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 215	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 15,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 216	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 16,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 217	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 17,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 218	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 18,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 219	,
-            "lotNumber" : 2,
+            "lotNumber" : "p2",
             "spaceNumber" : 19,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 300	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 0,
             "permitType" : "Student",
             "handicap" : 1,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 301	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 1,
             "permitType" : "Student",
             "handicap" : 1,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 302	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 2,
             "permitType" : "Faculty",
             "handicap" : 1,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 303	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 3,
             "permitType" : "Faculty",
             "handicap" : 1,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 304	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 4,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 305	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 5,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 306	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 6,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 307	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 7,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 308	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 8,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 309	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 9,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 310	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 10,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 311	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 11,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 312	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 12,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 313	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 13,
             "permitType" : "Student",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 314	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 14,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 315	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 15,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 316	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 16,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 317	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 17,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 318	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 18,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       },
       {
             "_id" : 319	,
-            "lotNumber" : 3,
+            "lotNumber" : "p3",
             "spaceNumber" : 19,
             "permitType" : "Faculty",
             "handicap" : 0,
             "meter" : 0,
-            "beTaken" : 0
+            "beTaken" : "Empty"
       }
 ]

@@ -94,171 +94,178 @@ var sentJSONs = [];
 var mailJSONs = [];
 var trashJSONs = [];
 
-function inboxOpen() {
+function inboxOpen(callback) {
   openInbox(function(err, mailbox) {
-  mailJSONs = [];
-  if (err) die(err);
-  imap.search([ 'ALL', ['SINCE', 'Febury 7, 2013'] ], function(err, results) {
+    mailJSONs = [];
     if (err) die(err);
-    imap.fetch(results,
-      { headers: ['from', 'to', 'subject', 'date'],
-        cb: function(fetch) {
-          fetch.on('message', function(msg) {
-            var mailJSON = {};
-            console.log('Saw message no. ' + msg.seqno);
-            var body = '';
-            msg.on('headers', function(hdrs) {
-              mailJSON.from = hdrs.from;
-              mailJSON.to = hdrs.to;
-              mailJSON.date = hdrs.date;
-              mailJSON.subject = hdrs.subject;
-              console.log('Headers for no. ' + msg.seqno + ': ' + show(hdrs));
+    imap.search([ 'ALL', ['SINCE', 'Febury 7, 2013'] ], function(err, results) {
+      if (err) die(err);
+      imap.fetch(results,
+        { headers: ['from', 'to', 'subject', 'date'],
+          cb: function(fetch) {
+            fetch.on('message', function(msg) {
+              var mailJSON = {};
+              console.log('Saw message no. ' + msg.seqno);
+              var body = '';
+              msg.on('headers', function(hdrs) {
+                mailJSON.from = hdrs.from;
+                mailJSON.to = hdrs.to;
+                mailJSON.date = hdrs.date;
+                mailJSON.subject = hdrs.subject;
+                console.log('Headers for no. ' + msg.seqno + ': ' + show(hdrs));
+              });
+              msg.on('end', function() {
+                console.log('Finished message no. ' + msg.seqno);
+                mailJSON.flags = msg.flags;
+                mailJSON.date = msg.date;
+                mailJSON.uid = msg.uid;
+                mailJSONs.push(mailJSON);
+                console.log('UID: ' + msg.uid);
+                console.log('Flags: ' + msg.flags);
+                console.log('Date: ' + msg.date);
+              });
             });
-            msg.on('end', function() {
-              console.log('Finished message no. ' + msg.seqno);
-              mailJSON.flags = msg.flags;
-              mailJSON.date = msg.date;
-              mailJSON.uid = msg.uid;
-              mailJSONs.push(mailJSON);
-              console.log('UID: ' + msg.uid);
-              console.log('Flags: ' + msg.flags);
-              console.log('Date: ' + msg.date);
-            });
-          });
+          }
+        }, function(err) {
+          if (err) throw err;
+          console.log('Done fetching all messages!');
+          imap.logout();
+          callback();
         }
-      }, function(err) {
-        if (err) throw err;
-        console.log('Done fetching all messages!');
-        imap.logout();
-      }
-    );
-  });
+      );
+    });
   });
 }
 
-function sentOpen() {
+function sentOpen(callback) {
  openSent(function(err, mailbox) {
+  sentJSONs = [];
   if (err) die(err);
   imap.search([ 'ALL', ['SINCE', 'Febury 5, 2013'] ], function(err, results) {
-    if (err) die(err);
-    imap.fetch(results,
-      { headers: ['from', 'to', 'subject', 'date'],
-        body: true,
-        cb: function(fetch) {
-          fetch.on('message', function(msg) {
-            var mailJSON = {};
-            console.log('Saw message no. ' + msg.seqno);
-            msg.on('headers', function(hdrs) {
-              mailJSON.from = hdrs.from;
-              mailJSON.to = hdrs.to;
-              mailJSON.date = hdrs.date;
-              mailJSON.subject = hdrs.subject;
-              console.log('Headers for no. ' + msg.seqno + ': ' + show(hdrs));
+      if (err) die(err);
+      imap.fetch(results,
+        { headers: ['from', 'to', 'subject', 'date'],
+          body: true,
+          cb: function(fetch) {
+            fetch.on('message', function(msg) {
+              var mailJSON = {};
+              console.log('Saw message no. ' + msg.seqno);
+              msg.on('headers', function(hdrs) {
+                mailJSON.from = hdrs.from;
+                mailJSON.to = hdrs.to;
+                mailJSON.date = hdrs.date;
+                mailJSON.subject = hdrs.subject;
+                console.log('Headers for no. ' + msg.seqno + ': ' + show(hdrs));
+              });
+              msg.on('end', function() {
+                console.log('Finished message no. ' + msg.seqno);
+                mailJSON.flags = msg.flags;
+                mailJSON.date = msg.date;
+                sentJSONs.push(mailJSON);
+                console.log('UID: ' + msg.uid);
+                console.log('Flags: ' + msg.flags);
+                console.log('Date: ' + msg.date);
+              });
             });
-            msg.on('end', function() {
-              console.log('Finished message no. ' + msg.seqno);
-              mailJSON.flags = msg.flags;
-              mailJSON.date = msg.date;
-              sentJSONs.push(mailJSON);
-              console.log('UID: ' + msg.uid);
-              console.log('Flags: ' + msg.flags);
-              console.log('Date: ' + msg.date);
-            });
-          });
+          }
+        }, function(err) {
+          if (err) throw err;
+          console.log('Done fetching all messages!');
+          imap.logout();
+          callback();
         }
-      }, function(err) {
-        if (err) throw err;
-        console.log('Done fetching all messages!');
-        imap.logout();
-      }
-    );
-  });
+      );
+    });
   });
 }
 
-function trashOpen() {
+function trashOpen(callback) {
  openTrash(function(err, mailbox) {
+  trashJSONs = [];
   if (err) die(err);
   imap.search([ 'ALL', ['SINCE', 'Febury 5, 2013'] ], function(err, results) {
-    if (err) die(err);
-    imap.fetch(results,
-      { headers: ['from', 'to', 'subject', 'date'],
-        body: true,
-        cb: function(fetch) {
-          fetch.on('message', function(msg) {
-            var trashJSON = {};
-            console.log('Saw message no. ' + msg.seqno);
-            msg.on('headers', function(hdrs) {
-              trashJSON.from = hdrs.from;
-              trashJSON.to = hdrs.to;
-              trashJSON.date = hdrs.date;
-              trashJSON.subject = hdrs.subject;
-              console.log('Headers for no. ' + msg.seqno + ': ' + show(hdrs));
+      if (err) die(err);
+      imap.fetch(results,
+        { headers: ['from', 'to', 'subject', 'date'],
+          body: true,
+          cb: function(fetch) {
+            fetch.on('message', function(msg) {
+              var trashJSON = {};
+              console.log('Saw message no. ' + msg.seqno);
+              msg.on('headers', function(hdrs) {
+                trashJSON.from = hdrs.from;
+                trashJSON.to = hdrs.to;
+                trashJSON.date = hdrs.date;
+                trashJSON.subject = hdrs.subject;
+                console.log('Headers for no. ' + msg.seqno + ': ' + show(hdrs));
+              });
+              msg.on('end', function() {
+                console.log('Finished message no. ' + msg.seqno);
+                trashJSON.flags = msg.flags;
+                trashJSON.date = msg.date;
+                trashJSONs.push(trashJSON);
+                console.log('UID: ' + msg.uid);
+                console.log('Flags: ' + msg.flags);
+                console.log('Date: ' + msg.date);
+              });
             });
-            msg.on('end', function() {
-              console.log('Finished message no. ' + msg.seqno);
-              trashJSON.flags = msg.flags;
-              trashJSON.date = msg.date;
-              trashJSONs.push(trashJSON);
-              console.log('UID: ' + msg.uid);
-              console.log('Flags: ' + msg.flags);
-              console.log('Date: ' + msg.date);
-            });
-          });
+          }
+        }, function(err) {
+          if (err) throw err;
+          console.log('Done fetching all messages!');
+          imap.logout();
+          callback();
         }
-      }, function(err) {
-        if (err) throw err;
-        console.log('Done fetching all messages!');
-        imap.logout();
-      }
-    );
-  });
+      );
+    });
   });
 }
 
 var mailDetailJSON = {};
 
-function inboxOpenOne(emailID) {
+function inboxOpenOne(emailID, callback) {
   openInbox(function(err, mailbox) {
   if (err) die(err);
+  mailDetailJSON = {};
   imap.search([ 'ALL', ['SINCE', 'Febury 7, 2013'], ['UID', emailID] ], function(err, results) {
-    if (err) die(err);
-    imap.fetch(results,
-      { headers: ['from', 'to', 'subject', 'date'],
-        body: true,
-        cb: function(fetch) {
-          fetch.on('message', function(msg) {
-            console.log('Saw message no. ' + msg.seqno);
-            var body = '';
-            msg.on('headers', function(hdrs) {
-              mailDetailJSON.from = hdrs.from;
-              mailDetailJSON.to = hdrs.to;
-              mailDetailJSON.date = hdrs.date;
-              mailDetailJSON.subject = hdrs.subject;
-              console.log('Headers for no. ' + msg.seqno + ': ' + show(hdrs));
+      if (err) die(err);
+      imap.fetch(results,
+        { headers: ['from', 'to', 'subject', 'date'],
+          body: true,
+          cb: function(fetch) {
+            fetch.on('message', function(msg) {
+              console.log('Saw message no. ' + msg.seqno);
+              var body = '';
+              msg.on('headers', function(hdrs) {
+                mailDetailJSON.from = hdrs.from;
+                mailDetailJSON.to = hdrs.to;
+                mailDetailJSON.date = hdrs.date;
+                mailDetailJSON.subject = hdrs.subject;
+                console.log('Headers for no. ' + msg.seqno + ': ' + show(hdrs));
+              });
+              msg.on('data', function(chunk) {
+                body += chunk.toString('utf8');
+              });
+              msg.on('end', function() {
+                console.log('Finished message no. ' + msg.seqno);
+                mailDetailJSON.flags = msg.flags;
+                mailDetailJSON.date = msg.date;
+                mailDetailJSON.uid = msg.uid;
+                mailDetailJSON.body = show(body);
+                console.log('UID: ' + msg.uid);
+                console.log('Flags: ' + msg.flags);
+                console.log('Date: ' + msg.date);
+              });
             });
-            msg.on('data', function(chunk) {
-              body += chunk.toString('utf8');
-            });
-            msg.on('end', function() {
-              console.log('Finished message no. ' + msg.seqno);
-              mailDetailJSON.flags = msg.flags;
-              mailDetailJSON.date = msg.date;
-              mailDetailJSON.uid = msg.uid;
-              mailDetailJSON.body = show(body);
-              console.log('UID: ' + msg.uid);
-              console.log('Flags: ' + msg.flags);
-              console.log('Date: ' + msg.date);
-            });
-          });
+          }
+        }, function(err) {
+          if (err) throw err;
+          console.log('Done fetching all messages!');
+          imap.logout();
+          callback();
         }
-      }, function(err) {
-        if (err) throw err;
-        console.log('Done fetching all messages!');
-        imap.logout();
-      }
-    );
-  });
+      );
+    });
   });
 }
 
@@ -287,27 +294,34 @@ app.post('/auth/logout', function(req, res) {
 
 app.get('/api/sent', function(req, res) {
   res.contentType('application/json');
-  sentOpen();
-  res.send(sentJSONs);
+  var sendmails = function() {
+    res.send(sentJSONs);
+  };
+  sentOpen(sendmails);
 });
 
 app.get('/api/inbox', function(req, res) {
   res.contentType('application/json');
-  inboxOpen();
-  res.send(mailJSONs);
+  var sendmails = function() {
+    res.send(mailJSONs);
+  };
+  inboxOpen(sendmails);
 });
 
 app.get('/api/trash', function(req, res) {
   res.contentType('application/json');
-  trashOpen();
-  res.send(trashJSONs);
+  var sendmails = function () {
+    res.send(trashJSONs);
+  };
+  trashOpen(sendmails);
 });
 
 app.get('/api/inbox/:emailID', function(req, res) {
   res.contentType('application/json');
-  console.log(req.params.emailID);
-  inboxOpenOne(req.params.emailID);
-  res.send(mailDetailJSON);
+  var sendmail = function () {
+    res.send(mailDetailJSON);
+  };
+  inboxOpenOne(req.params.emailID, sendmail);
 });
 
 app.post('/api/email/sendMail', function(req, res) {

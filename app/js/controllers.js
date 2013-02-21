@@ -51,6 +51,10 @@ function MainController ($scope, $route, $http, $location, $rootScope, $cookieSt
 			$cookieStore.remove("user");
       });
     };
+
+    $scope.parkingPopUp = function() {
+		$rootScope.$broadcast('event:parkingUp');
+	};
 }
 
   function GradesCtrl($scope, Resources) {
@@ -124,10 +128,22 @@ function GeneralSchCtrl($scope, $http) {
 	});
 }
 
-function ParkingMenuCtrl($scope, $http) {
+function ParkingMenuCtrl($scope, $http, $routeParams) {
 	$scope.parkings = [
-	{'name':'Lot 2', 'sign': '$ M P H', 'space':6,'capacity':30}, {'name':'Lot 3', 'sign': '$ M P S H', 'space':9,'capacity':50}, {'name':'Lot 7', 'sign': '$ M P H', 'space':20,'capacity':40}, {'name':'Lot 10', 'sign': '$ P H', 'space':7,'capacity':50}
+	{'id': 'p1','name':'Lot 1', 'sign': '$ M P H', 'space':6,'capacity':20}, {'id': 'p2', 'name':'Lot 2', 'sign': '$ M P H', 'space': 9,'capacity':50}, {'id': 'p3', 'name':'Lot 3', 'sign': '$ M P H', 'space':20,'capacity':40}
 	];
+
+	$http.get('sampledata/parkingStructure.json').success(
+		function(data) {
+			$scope.spots = data;
+		}
+	);
+
+	$scope.parkingID = $routeParams.parkingID;
+
+	$scope.format = 'h:mm:ss a';
+
+	$scope.Empty = 'Empty';
 }
 
 function GMapCtrl($scope, $http) {

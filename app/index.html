@@ -4,7 +4,6 @@
 
 <link rel="stylesheet" media="screen and (max-width: 850px)" href="css/style.css" type="text/css" />
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 <link rel='stylesheet' type='text/css' href='lib/fullcalendar/fullcalendar.css' />
 <link rel='stylesheet' type='text/css' href='lib/fullcalendar/fullcalendar.print.css' media='print' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -31,6 +30,7 @@
 
 </head>
 <body ng-controller = "MainController" class="auth-demo-application">
+	<div id="parking-instruction" ng-include src="'partials/parking-instruction.html'" title="Instruction"></div>
 	<div class="main-container">
 	<div id="login-container">
 	<form ng-submit="login()">
@@ -61,6 +61,7 @@
 			<ng-include ng-switch-when="partials/inbox.html" src="'partials/mailFooter.html'"></ng-include>
 			<ng-include ng-switch-when="partials/mail-send.html" src="'partials/mailFooter.html'"></ng-include>
 			<ng-include ng-switch-when="partials/Parking-menu.html" src="'partials/parkingFooter.html'"></ng-include>
+			<ng-include ng-switch-when="partials/Parking-detail.html" src="'partials/parkingFooter.html'"></ng-include>
 			<ng-include ng-switch-default src="'footer.html'"></ng-include>
 		</ng-switch>
 	</footer>

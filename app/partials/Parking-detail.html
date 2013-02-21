@@ -1,0 +1,30 @@
+<div class="get-container" ng-repeat="parking in parkings | filter:parkingID">
+	<div align="center">
+		<div class="header">
+			<p id="header">Parking</p>
+		</div>
+		<div class="sub-header" style="text-align:left;">
+			<span style="font-weight: bold;">{{parking.name}}</span> <span style="margin-left: 40%;">{{parking.space}}/{{parking.capacity}}</span><span style="margin-left:20%;" my-current-time="format"></span>
+		</div>
+		<div id="spot-container">
+			<table style="width: 90%;">
+				<tr>
+					<th>
+						Spot Number
+					</th>
+					<th>
+						Permit Type
+					</th>
+				</tr>
+				<tbody ng-repeat="spot in spots | filter: {beTaken: Empty} | filter: {lotNumber: parkingID}">
+					<tr>
+						<td>spot {{spot.spaceNumber}}</td>
+						<td>{{spot.permitType}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+	</div>
+	<div class = "clear"> </div>
+</div>
