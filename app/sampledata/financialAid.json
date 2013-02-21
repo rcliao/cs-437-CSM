@@ -1,0 +1,16 @@
+[
+	{
+		"description": "PELL GRANT F/W/SP",
+		"category": "Grant",
+		"offered": "1234.56",
+		"accepted": "1234.56",
+		"group" : "1"
+	},
+	{
+		"description": "BOSS Award",
+		"category": "Scholarship",
+		"offered": "800.00",
+		"accepted": "800.00",
+		"group" : "2"
+	}
+]

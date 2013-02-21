@@ -1,9 +1,6 @@
 var express = require('express'),
     app = express.createServer(),
     db = require('mongojs').connect('csm');
-
-var gm = require('googlemaps');
-var util = require('util');
     
 app.configure(function () {
 	app.use(express.favicon());
@@ -338,15 +335,6 @@ app.get('/api/emailcount/inbox', function(req, res) {
       imap.logout();
     });
   });
-});
-
-app.get('/data/maps', function(req, res) {
-  var map = gm.staticMap('5151 State University Dr Los Angeles, CA', 13, '500x500', function(err, data){
-    require('fs').writeFileSync('test_map.png', data, 'binary');
-  }, false, 'roadmap', markers, styles, paths);
-  console.log("map info: " + map);
-  res.contentType('url');
-  res.send(map);
 });
 
 // Query

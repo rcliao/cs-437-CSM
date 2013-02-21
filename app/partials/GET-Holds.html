@@ -1,13 +1,41 @@
-
+<div align="center">
 	<div class="header">
 		<p id="header">Holds</p>
 	</div>
-	<div class="holds-container" ng-repeat="hold in holds">
-		<div class = "hold-container">
-			<h3>{{hold.from}}:</h3> 
-			{{hold.content}}
-		</div>
+	<div class="holds-container">
+			<div class="CSSTable" style="width:90%;" ng-repeat="hold in holds">
+			<!-- BEGIN REPEAT HERE-->
+			<TABLE BORDER="1">
+				<TR>
+					<TD style="color:yellow; background-color:black;"> Hold Item
+					<TD style="color:yellow; background-color:black;"> {{hold.holdItem}}
+				</TR>
+				<TR>
+					<TD> Amount
+					<TD> {{hold.Amount}}
+				</TR>
+				<TR>
+					<TD> Department
+					<TD> <A HREF="{{hold.Hyperlink}}"> {{hold.Department}} </A>
+				</TR>
+				<TR>
+					<TD> Reason
+					<TD> {{hold.Reason}}
+				</TR>
+				<TR>
+					<TD> Contact
+					<TD> {{hold.Contact}}
+				</TR>
+				<TR>
+					<TD> Instructions
+					<TD> {{hold.Instructions}}
+				</TR>
+			</TABLE>
+			<BR/>
+			<!-- END REPEAT HERE-->
+			</div>
 	</div>
 	
 	</div>
 	<div class = "clear"> </div>
+</div>

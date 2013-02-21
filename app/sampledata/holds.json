@@ -1,0 +1,32 @@
+[
+	{
+		"holdItem": "Enrollment",
+		"Amount": "",
+		"Department": "International Student Programs",
+		"Description": "Cal State LA",
+		"Reason": "",
+		"Contact": "",
+		"Instructions": "",
+		"Hyperlink": "http://www.calstatela.edu/academic/registrar/enrolsrv.php"
+	},
+	{
+		"holdItem": "Advisement",
+		"Amount": "",
+		"Department": "The Department of Advisement",
+		"Description": "Cal State LA",
+		"Reason": "You forgot to set up an appointment",
+		"Contact": "Advisement",
+		"Instructions": "Get advisement",
+		"Hyperlink": "http://www.calstatela.edu/univ/advise/"
+	},
+	{
+		"holdItem": "Enrollment",
+		"Amount": "48.00",
+		"Department": "Department of Public Safety",
+		"Description": "Unpaid Parking Citations",
+		"Reason": "Unpaid tickets",
+		"Contact": "Campus Police",
+		"Instructions": "pay dem tickets, yo",
+		"Hyperlink": "http://www.calstatela.edu/univ/police/"
+	}
+]

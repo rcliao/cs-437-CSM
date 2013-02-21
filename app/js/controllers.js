@@ -12,18 +12,11 @@ function MenuCtrl($scope, Resources) {
 function GETMenuCtrl($scope) {
 }
 
-function GETHoldsCtrl($scope, Resources) {
-	$scope.holds = [{"from": "Library Fee", "content": "$5.00"},
-					{"from": "Writing Center", "content": "WPE"}];
-}
-
 function AnnoCtrl($scope, Resources) {
-
 	$scope.announcements = [{"head":"LEAP 2013 Leadership In Action Program (6/17 -8/9)", "content" : "Application Deadline: 3/12"},
 							 {"head": "The AAAS Scholars Lecture Series Winter 2013 Lecture" , "content" : " 12-1:30pm, 3/13, USU LA RoomB)"},
 							 {"head" : "SCREENING OF AUTUMN GEM" , "content" : "A Documentary on Modern China’s First Feminist April 21, 2013, 1:30-3:30 P.M. University-Student Union, Pasadena Room 307"},
 							 {"head" : "CSU Employee Update", "content": "Number of CSU Donors Increases in 2011-12"}]
-
 }
 
 function AnnoNewCtrl(Resources, $routeParams, $scope, $location) {
@@ -72,21 +65,12 @@ function MainController ($scope, $route, $http, $location, $rootScope, $cookieSt
   $scope.SelectedTerm = $scope.terms[0];
 }
 
-function financialAidController($scope) {
-	$scope.financialAids = [
-	{
-		"description": "PELL GRANT F/W/SP",
-		"category": "Grant",
-		"offered": "1234.56",
-		"accepted": "1234.56"
-	},
-	{
-		"description": "BOSS Award",
-		"category": "Scholarship",
-		"offered": "13.77",
-		"accepted": "13.77"
-	}
-  ];
+function financialAidController($scope, $http) {
+	$http.get('sampledata/financialAid.json').success(function(data) {
+		$scope.financialAids = data;
+	});
+	
+	$scope.declineAid=function(){$scope.financialAids.splice(0,1)};
 }
 
 function MailCtrl($scope, Resources) {
@@ -147,4 +131,13 @@ function ParkingMenuCtrl($scope, $http, $routeParams) {
 }
 
 function GMapCtrl($scope, $http) {
+	$http.get('data/maps').success(function(data) {
+		$scope.map = data;
+	});
+}
+
+function GETHoldsCtrl($scope, $http) {
+	$http.get('sampledata/holds.json').success(function(data) {
+		$scope.holds = data;
+	});
 }

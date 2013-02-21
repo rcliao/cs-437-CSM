@@ -1,28 +1,27 @@
-<DIV CLASS="header">
-	<p id="header">Financial Aid</p>
-</DIV>
-<DIV CLASS="financialAid-container">
-	<TABLE BORDER="1">
-		<TR>
-			<TH> AWARD DESCRIPTION
-			<TH> CATEGORY
-			<TH> OFFERED
-			<TH> ACCEPTED
-		</TR>
-		<!-- BEGIN REPEAT HERE-->
-		<TR ng-repeat="financialAid in financialAids">
-			<TD> {{financialAid.description}}
-			<TD> {{financialAid.category}}
-			<TD> {{financialAid.offered}}
-			<TD> {{financialAid.accepted}}
-		</TR>
-		<!-- END REPEAT HERE-->
-	</TABLE>
-	<TABLE BORDER="1" WIDTH="100%">
-		<TR>
-			<TD> <A HREF="">BACK</A>
-			<TD> <A HREF="">KEY</A>
-			<TD> <A HREF="">LOCATION</A>
-		</TR>
-	</TABLE>
+<div align="center">
+	<div class="header">
+		<p id="header">Financial Aid</p>
+	</div>
+	<!-- <DIV CLASS="financialAid-container"> -->
+		<div class="CSSTable" style="width:90%;">
+		<TABLE BORDER="1">
+			<TR>
+				<TD> AWARD DESCRIPTION
+				<TD> CATEGORY
+				<TD> OFFERED
+				<TD> ACCEPTED
+				<TD>
+			</TR>
+			<!-- BEGIN REPEAT HERE-->
+			<TR ng-repeat="financialAid in financialAids">
+				<TD> {{financialAid.description}}
+				<TD> {{financialAid.category}}
+				<TD> {{financialAid.offered}}
+				<TD> {{financialAid.accepted}}
+				<TD> <input type="radio" id="A{{financialAid.group}}" name="group{{financialAid.group}}" value="Accept" onclick="document.getElementById('D{{financialAid.group}}').setAttribute('disabled');"> Accept <input type="radio" id="D{{financialAid.group}}" name="group{{financialAid.group}}" value="Decline" onclick="document.getElementById('A{{financialAid.group}}').setAttribute('disabled');"> Decline<br>
+			</TR>
+			<!-- END REPEAT HERE-->
+		</TABLE>
+		</div>
+	<!-- </DIV> -->
 </DIV>
