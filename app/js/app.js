@@ -21,8 +21,8 @@ angular.module('csm', ['csm.services', 'ngCookies', 'ngSanitize', 'csm.directive
 		when('/Schedule', {templateUrl: 'partials/Schedule-menu.html', controller: MainController}).
 		when('/Schedule/Weekly', {templateUrl: 'partials/Schedule-weekly.html', controller: MainController}).
 		when('/Schedule/General', {templateUrl: 'partials/Schedule-general.html', controller: GeneralSchCtrl}).
-		when('/Parking', {templateUrl: 'partials/Parking-menu.html', controller: ParkingMenuCtrl}).
-		when('/Parking/:parkingID', {templateUrl: 'partials/Parking-detail.html', controller: ParkingMenuCtrl}).
+		when('/Parkings', {templateUrl: 'partials/Parking-menu.html', controller: ParkingMenuCtrl}).
+		when('/Parkings/:parkingID', {templateUrl: 'partials/Parking-detail.html', controller: ParkingMenuCtrl}).
 		when('/Parking/Map', {templateUrl: 'partials/Parking-map.html', controller: GMapCtrl}).
 		otherwise({redirectTo: '/main'});
 }]);

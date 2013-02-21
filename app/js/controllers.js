@@ -131,9 +131,6 @@ function ParkingMenuCtrl($scope, $http, $routeParams) {
 }
 
 function GMapCtrl($scope, $http) {
-	$http.get('data/maps').success(function(data) {
-		$scope.map = data;
-	});
 }
 
 function GETHoldsCtrl($scope, $http) {

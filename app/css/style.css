@@ -1,299 +1,313 @@
 @media screen and (max-width: 850px){
 
-/* CSS Mobile Reset */
+	/* CSS Mobile Reset */
 
-body
-{
- font-family:Arial,  sans-serif;
- line-height:1.5;
- font-size:16px;
- background: #fff;
- padding:5px;
- color: #000;
- word-wrap: break-word;
- -webkit-text-size-adjust: none;
-}
+	body
+	{
+	 font-family:Arial,  sans-serif;
+	 line-height:1.5;
+	 font-size:16px;
+	 background: #fff;
+	 padding:5px;
+	 color: #000;
+	 word-wrap: break-word;
+	 -webkit-text-size-adjust: none;
+	}
 
-h1, h2, h3, h4, h5, h6{ font-weight: normal; }
+	h1, h2, h3, h4, h5, h6{ font-weight: normal; }
 
-p img { float: left; margin: 0 10px 5px 0; padding: 0; }
+	p img { float: left; margin: 0 10px 5px 0; padding: 0; }
 
-img { border: 0; max-width: 100%; }
+	img { border: 0; max-width: 100%; }
 
-table { width:auto; border-collapse: collapse;border-spacing: 0; }
+	table { width:auto; border-collapse: collapse;border-spacing: 0; }
 
-html, body {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	height: 100%;
-	background-color: grey;
-}
+	html, body {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		height: 100%;
+		background-color: grey;
+	}
 
-.main-container {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	width: 100%;
-	height: 90%;
-}
-.header {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	float: left;
-	width: 100%;
-	height: 15%;
-	background-color: yellow;
-	
-}
-.sub-header {
-	margin: 0;
-	padding: 0;
-	border: solid 4px blue;
-	float: left;
-	width: 98%;
-	height: 15%;
-	background-color: yellow;
-	
-}
-.main-menu-button {
-	margin: 5% 5% 5% 5%;
-	float: left;
-	width: 40%;
-	height: 20%;
-	background-color:orange;
-}
-.main-menu-Annobutton {
-	margin: 5% 5% 5% 5%;
-	float:left;
-	width:90%;
-	height: 15%;
-	background-color:orange;
-}
+	.main-container {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		width: 100%;
+		height: 90%;
+	}
+	.header {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		float: left;
+		width: 100%;
+		height: 15%;
+		background-color: yellow;
+		
+	}
+	.sub-header {
+		margin: 0;
+		padding: 0;
+		border: solid 4px blue;
+		float: left;
+		width: 98%;
+		height: 15%;
+		background-color: yellow;
+		
+	}
+	.main-menu-button {
+		margin: 5% 5% 5% 5%;
+		float: left;
+		width: 40%;
+		height: 20%;
+		background-color:orange;
+	}
+	.main-menu-Annobutton {
+		margin: 5% 5% 5% 5%;
+		float:left;
+		width:90%;
+		height: 15%;
+		background-color:orange;
+	}
 
-.get-container {
-   text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	height: 100%;
-	background-color: grey;
-	
-}
-
-
-.get-menu-button {
-	margin: 5% 5% 5% 5%;
-	height: 60%;
-	width:40%;
-	background-color:orange;
-}
-
-.get-menu-Annobutton {
-	margin: 5% 5% 5% 5%;
-	float:left;
-	width:90%;
-	height:45%
-	background-color:orange;
-}
+	.get-container {
+	   text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		height: 100%;
+		background-color: grey;
+		
+	}
 
 
-.log-in-container {
-	float: left;
-	text-align: center;
-	margin: 5% 5% 5% 5%;
-	width: 80%;
-}
-.announcement-container {
-	float: left;
-	text-align: center;
-	margin: 10% 10% 0% 10%;
-	width: 80%;
-}
-.announcement-header {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	font-weight: bold;
-	width: 80%;
-	background-color: lightyellow;
-}
-.announcement-holder {
-	
-}
-.announcement-holder-odd {
-	float: left;
-	width: 100%;
-	background-color: grey;
-	border-style:solid;
-	border-color: blue;
-	border-width: 2px;
-}
-.announcement-holder-even {
-	float: left;
-	width: 100%;
-	background-color: lightgrey;
-	border-style:solid;
-	border-color: blue;
-	border-width: 2px;
-}
-.clear{
-	clear:both;
-}
-.inbox-header {
-	width: 100%;
-	background-color: orange;
-	text-align: center;
-}
-.emails-hodler {
-	width: 100%;
-}
-.email-container {
-	width: 95%;
-	background-color: white;
-	color: black;
-	border-style: solid;
-	border-width: 1;
+	.get-menu-button {
+		margin: 5% 5% 5% 5%;
+		height: 60%;
+		width:40%;
+		background-color:orange;
+	}
+
+	.get-menu-Annobutton {
+		margin: 5% 5% 5% 5%;
+		float:left;
+		width:90%;
+		height:45%
+		background-color:orange;
+	}
+
+
+	.log-in-container {
+		float: left;
+		text-align: center;
+		margin: 5% 5% 5% 5%;
+		width: 80%;
+	}
+	.announcement-container {
+		float: left;
+		text-align: center;
+		margin: 10% 10% 0% 10%;
+		width: 80%;
+	}
+	.announcement-header {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		font-weight: bold;
+		width: 80%;
+		background-color: lightyellow;
+	}
+	.announcement-holder {
+		
+	}
+	.announcement-holder-odd {
+		float: left;
+		width: 100%;
+		background-color: grey;
+		border-style:solid;
+		border-color: blue;
+		border-width: 2px;
+	}
+	.announcement-holder-even {
+		float: left;
+		width: 100%;
+		background-color: lightgrey;
+		border-style:solid;
+		border-color: blue;
+		border-width: 2px;
+	}
+	.clear{
+		clear:both;
+	}
+	.inbox-header {
+		width: 100%;
+		background-color: orange;
+		text-align: center;
+	}
+	.emails-hodler {
+		width: 100%;
+	}
+	.email-container {
+		width: 95%;
+		background-color: white;
+		color: black;
+		border-style: solid;
+		border-width: 1;
+	}
+
+	.email-container input,textarea {
+		width: 90%;
+		margin: 2% 5% 2% 5%;
+	}
+
+	.holds-container {
+		width: 100%;
+	}
+
+	.hold-container {
+		margin: 5%;
+		float: left;
+		height: 30%;
+		width: 90%;
+		background-color: yellow;
+	}
+
+	table.login {
+		width: 90%;
+		margin-left: auto;
+	    margin-right: auto;
+	}
+
+	input.login {
+		width: 100%;
+		height: 30px;
+		font-size: large;
+		font-weight: bold;
+	}
+
+	p#header { 
+		text-align: center;
+		font-size: large;
+		font-weight:bold;
+	}
+	p#main-menu { 
+		text-align: center;
+		font-size: medium;
+		font-weight:bold;
+	}
+
+	.grades-container {
+		width: 100%;
+		float: left;
+	}
+
+	div.grade-container {
+		width: 95%;
+		float:left;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	div.grade-container table.gradeTable {
+		margin: 3% 3% 3% 3%;
+		border: 1px solid black;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	div.grade-container table.gradeTable th,td {
+		border: 1px solid black;
+	}
+	div.grade-container table.gradeTable th {
+		background-color: lightgrey;
+	}
+	div.grade-container table.gradeTable td {
+		text-align: center;
+		background-color: darkgrey;
+	}
+
+	/* BEGIN OF Financial aid DIVS */
+	.financialAid-container {
+		margin: 5% 5% 5% 5%;
+		padding: 5%;
+		border: 0;
+		width: 100%;
+		height: 90%;
+		
+	}
+	/* END OF Financial aid DIVS */
+
+	footer {
+		position: fixed;
+		height: 10%;
+		width: 100%;
+		background-color: yellow;
+		margin: 0;
+		padding: 0;
+	}
+
+	.content {
+		height: 70%;
+		float:left;
+	}
+
+	footer div#footer-container {
+		padding: 20px 20px 20px 20px;
+	}
+
+	.placeholder { color: #aaa; }
+
+	#catelog-holder table th,td {
+		text-align: center;
+		border: 1px solid black;
+	}
+
+	#catelog-holder table th {
+		font-weight: bold;
+	}
+
+	.parking-container {
+		width: 25%;
+		float: right;
+		margin: 3%;
+		background-color: white;
+		color: black;
+		border-style: solid;
+		border-width: 1;
+	}
+
+	.parking-sign {
+		width: 25%;
+		float: left;
+		margin: 3%;
+		background-color: white;
+		color: black;
+		border-style: solid;
+		border-width: 1;
+	}
+
+	.spot-container {
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+		background: white;
+	}
+
+	#map_canvas{
+	    width: 95%;
+	    height: 400px;
+	    border: 1px solid black;
+	    float: left;
+	}
+	#directions {
+	    width: 95%;
+	    float: left; 
+	}
+
 }
 
-.email-container input,textarea {
-	width: 90%;
-	margin: 2% 5% 2% 5%;
-}
-
-.holds-container {
-	width: 100%;
-}
-
-.hold-container {
-	margin: 5%;
-	float: left;
-	height: 30%;
-	width: 90%;
-	background-color: yellow;
-}
-
-table.login {
-	width: 90%;
-	margin-left: auto;
-    margin-right: auto;
-}
-
-input.login {
-	width: 100%;
-	height: 30px;
-	font-size: large;
-	font-weight: bold;
-}
-
-p#header { 
-	text-align: center;
-	font-size: large;
-	font-weight:bold;
-}
-p#main-menu { 
-	text-align: center;
-	font-size: medium;
-	font-weight:bold;
-}
-
-.grades-container {
-	width: 100%;
-	float: left;
-}
-
-div.grade-container {
-	width: 95%;
-	float:left;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-div.grade-container table.gradeTable {
-	margin: 3% 3% 3% 3%;
-	border: 1px solid black;
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-}
-div.grade-container table.gradeTable th,td {
-	border: 1px solid black;
-}
-div.grade-container table.gradeTable th {
-	background-color: lightgrey;
-}
-div.grade-container table.gradeTable td {
-	text-align: center;
-	background-color: darkgrey;
-}
-
-/* BEGIN OF Financial aid DIVS */
-.financialAid-container {
-	margin: 5% 5% 5% 5%;
-	padding: 5%;
-	border: 0;
-	width: 100%;
-	height: 90%;
-	
-}
-/* END OF Financial aid DIVS */
-
-footer {
-	position: fixed;
-	height: 10%;
-	width: 100%;
-	background-color: yellow;
-	margin: 0;
-	padding: 0;
-}
-
-.content {
-	height: 70%;
-}
-
-footer div#footer-container {
-	padding: 20px 20px 20px 20px;
-}
-
-.placeholder { color: #aaa; }
-
-#catelog-holder table th,td {
-	text-align: center;
-	border: 1px solid black;
-}
-
-#catelog-holder table th {
-	font-weight: bold;
-}
-
-.parking-container {
-	width: 25%;
-	float: right;
-	margin: 3%;
-	background-color: white;
-	color: black;
-	border-style: solid;
-	border-width: 1;
-}
-
-.parking-sign {
-	width: 25%;
-	float: left;
-	margin: 3%;
-	background-color: white;
-	color: black;
-	border-style: solid;
-	border-width: 1;
-}
-
-.spot-container {
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-	background: white;
-}
-}
 .CSSTable {
 	margin:0px;padding:0px;
 	width:100%;

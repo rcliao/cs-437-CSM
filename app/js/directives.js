@@ -112,6 +112,7 @@ angular.module('csm.directives', []).
       link: function(scope, elem, attrs) {
         var directionsDisplay = new google.maps.DirectionsRenderer({ draggable: true });
         var directionsService = new google.maps.DirectionsService();
+        var map;
 
         var routeClear = elem.find('#routeClear');
         var routeGo = elem.find('#routeGo');
@@ -120,17 +121,18 @@ angular.module('csm.directives', []).
         var routeFrom = elem.find('#routeFrom');
 
         var myOptions = {
-            zoom: 10,
+            zoom: 14,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
-            center: new google.maps.LatLng(35.270, -80.837)
+            center: new google.maps.LatLng(34.06337000000001, -118.170510)
         };
-        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+        map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
         directionsDisplay.setMap(map);
         directionsDisplay.setPanel(document.getElementById("directions"));
         
         routeMode.on("change", function() { calcRoute(); });
         routeGo.on("click", function() { calcRoute(); });
         routeClear.on("click", function() { directionsDisplay.setDirections({ routes: [] }); });
+
         
         function calcRoute() {
             var request = {

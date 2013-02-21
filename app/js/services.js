@@ -63,38 +63,49 @@ angular.module('csm.services', ['ngResource']).
             });
         }
     ]).
-	factory('AuthService', function($rootScope, $cookieStore) {
-	var authServices = {};
-	
-	authServices.loginConfirmed = function(username) {
-		$cookieStore.put("user", username);
-		$rootScope.$broadcast('event:auth-loginConfirmed');
-	};
+  	factory('AuthService', function($rootScope, $cookieStore) {
+  	var authServices = {};
+  	
+  	authServices.loginConfirmed = function(username) {
+  		$cookieStore.put("user", username);
+  		$rootScope.$broadcast('event:auth-loginConfirmed');
+  	};
 
-	return authServices;
-	}).
-	config(function($httpProvider) {
-    
-    var interceptor = ['$rootScope', '$q', function($rootScope, $q) {
-      function success(response) {
-        return response;
-      }
- 
-      function error(response) {
-        if (response.status === 401) {
-          var deferred = $q.defer();
-          $rootScope.$broadcast('event:auth-loginRequired');
-          return deferred.promise;
+  	return authServices;
+  	}).
+  	config(function($httpProvider) {
+      
+      var interceptor = ['$rootScope', '$q', function($rootScope, $q) {
+        function success(response) {
+          return response;
         }
-        // otherwise
-        return $q.reject(response);
-      }
- 
-      return function(promise) {
-        return promise.then(success, error);
+   
+        function error(response) {
+          if (response.status === 401) {
+            var deferred = $q.defer();
+            $rootScope.$broadcast('event:auth-loginRequired');
+            return deferred.promise;
+          }
+          // otherwise
+          return $q.reject(response);
+        }
+   
+        return function(promise) {
+          return promise.then(success, error);
+        };
+   
+      }];
+      $httpProvider.responseInterceptors.push(interceptor);
+    }).
+    factory('Staging', function () {
+      var parkingInfos = {};
+      return {
+        put: function(item) {
+          stage = item;
+        },
+        get: function() {
+          return stage;
+        }
       };
- 
-    }];
-    $httpProvider.responseInterceptors.push(interceptor);
-  });
+    });
 
