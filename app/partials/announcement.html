@@ -1,3 +1,4 @@
+</div>
 <div class="header">
 	<p id="header">Announcement</p>
 </div>
@@ -6,9 +7,12 @@
 		Announcement
 	</div>
 	<div class="announcement-holder" ng-repeat = "announcement in announcements">
-		<div ng-class-odd="'announcement-holder-odd'" ng-class-even="'announcement-holder-even'">
-			{{announcement.head}}: {{announcement.content}}
-		</div>
+		<a href="#/announcement/{{announcement.name}}">
+			<div ng-class-odd="'announcement-holder-odd'" ng-class-even="'announcement-holder-even'">
+				{{announcement.head}}: {{announcement.content}}
+			</div>
+		</a>
 	</div>
 </div>
 <div class = "clear"> </div>
+</div>

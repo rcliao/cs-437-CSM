@@ -12,11 +12,15 @@ function MenuCtrl($scope, Resources) {
 function GETMenuCtrl($scope) {
 }
 
-function AnnoCtrl($scope, Resources) {
-	$scope.announcements = [{"head":"LEAP 2013 Leadership In Action Program (6/17 -8/9)", "content" : "Application Deadline: 3/12"},
-							 {"head": "The AAAS Scholars Lecture Series Winter 2013 Lecture" , "content" : " 12-1:30pm, 3/13, USU LA RoomB)"},
-							 {"head" : "SCREENING OF AUTUMN GEM" , "content" : "A Documentary on Modern China’s First Feminist April 21, 2013, 1:30-3:30 P.M. University-Student Union, Pasadena Room 307"},
-							 {"head" : "CSU Employee Update", "content": "Number of CSU Donors Increases in 2011-12"}]
+function AnnoCtrl($scope, Resources, $routeParams) {
+	$scope.announcements = [
+	{"name":"annon1","head":"LEAP 2013 Leadership In Action Program (6/17 -8/9)", "content" : "Application Deadline: 3/12", "details":"International Leadership Foundation (ILF) L.A. Chapter will be hosting a half day of leadership workshop on March 16th at Almansor Court in Alhambra, located on 700 S. Almansor Street, Alhambra, CA 91801. This workshop is intended for the students from the age of 15-20, who are interested in becoming a 21st century leader"},
+	{"name":"annon2","head": "The AAAS Scholars Lecture Series Winter 2013 Lecture" , "content" : " 12-1:30pm, 3/13, USU LA RoomB)", "details":"Chinese American Museum (Los Angeles) Executive Director Dr. Michael Duchemin, Curator Steven Y. Wong, and Education Programs Maneger Michael Truong will discuss the history of Chinese Americans in Los Angeles and their effort in preserve and present such an important past."},
+	{"name":"annon3","head" : "SCREENING OF AUTUMN GEM" , "content" : "A Documentary on Modern China’s First Feminist April 21, 2013, 1:30-3:30 P.M. University-Student Union","details":"Free Admission, University-Student Union, Pasadena Room 307, Refreshments will be served."},
+	{"name":"annon4","head" : "CSU Employee Update", "content": "Number of CSU Donors Increases in 2011-12","details":"The California State University Employee Update Thursday, January 24, 2013 From The Office of the President Number of CSU Donors Increases in 2011-12 A rise in individual donations from alumni, parents, faculty, staff, students and friends sustained level year-to-year giving to the CSU, according to the Philanthropic Annual Reportpresented to the CSU Board of Trustees this week."}
+							]
+						 
+	$scope.announcementName = $routeParams.announcementName;
 }
 
 function AnnoNewCtrl(Resources, $routeParams, $scope, $location) {

@@ -7,6 +7,7 @@ angular.module('csm', ['csm.services', 'ngCookies', 'ngSanitize', 'csm.directive
 		when('/login', {templateUrl: 'partials/login.html',   controller: MainController}).
 		when('/main', {templateUrl: 'partials/menu.html',   controller: MenuCtrl}).
 		when('/announcement', {templateUrl: 'partials/announcement.html',   controller: AnnoCtrl}).
+		when('/announcement/:announcementName', {templateUrl: 'partials/announcementDetails.html',   controller: AnnoCtrl}).
 		when('/announcementBack', {templateUrl: 'partials/announcementBack.html',   controller: AnnoNewCtrl}). 
 		when('/GET-Menu', {templateUrl: 'partials/GET-Menu.html',   controller: GETMenuCtrl}).
 		when('/GET-Holds', {templateUrl: 'partials/GET-Holds.html',   controller: GETHoldsCtrl}).
