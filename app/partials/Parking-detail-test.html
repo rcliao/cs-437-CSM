@@ -16,14 +16,14 @@
 						Permit Type
 					</th>
 					<th>
-						Testing
+						BeTaken
 					</th>
 				</tr>
-				<tbody ng-repeat="(id,spot) in spots | checkSpot:this">
+				<tbody ng-repeat="(id,spot) in spots">
 					<tr>
 						<td>spot {{spot.spaceNumber}}</td>
 						<td>{{spot.permitType}}</td>
-						<td><button ng-click="updateSpot(id)">Sensor Testing</button></td>
+						<td>{{spot.beTaken}}</td>
 					</tr>
 				</tbody>
 			</table>

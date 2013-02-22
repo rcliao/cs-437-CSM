@@ -24,32 +24,32 @@ function AnnoCtrl($scope, Resources, $routeParams) {
 }
 
 function AnnoNewCtrl(Resources, $routeParams, $scope, $location) {
-    $scope.announcement = new Resources();
-    
-    $scope.save = function () {
-        Resources.save({collection: 'announcements'}, $scope.announcement, function (res) { if (res.ok === 1) { $location.path("/anno");}});
+	$scope.announcement = new Resources();
+	
+	$scope.save = function () {
+		Resources.save({collection: 'announcements'}, $scope.announcement, function (res) { if (res.ok === 1) { $location.path("/anno");}});
 		$scope.announcement.head = '';
 		$scope.announcement.content = '';
-    };
+	};
 }
 
 function MainController ($scope, $route, $http, $location, $rootScope, $cookieStore, AuthService) {
-    $scope.$route = $route;
+	$scope.$route = $route;
 
-    $scope.login = function() {
-      $http.post('auth/login', {"username": $scope.username, "password": $scope.password}).success(function() {
-        AuthService.loginConfirmed($scope.username);
-      });
-    };
+	$scope.login = function() {
+	  $http.post('auth/login', {"username": $scope.username, "password": $scope.password}).success(function() {
+		AuthService.loginConfirmed($scope.username);
+	  });
+	};
 	
 	$scope.logout = function() {
-      $http.post('auth/logout').success(function() {
-        $scope.status ='guest';
+	  $http.post('auth/logout').success(function() {
+		$scope.status ='guest';
 			$cookieStore.remove("user");
-      });
-    };
+	  });
+	};
 
-    $scope.parkingPopUp = function() {
+	$scope.parkingPopUp = function() {
 		$rootScope.$broadcast('event:parkingUp');
 	};
 }
@@ -60,11 +60,11 @@ function MainController ($scope, $route, $http, $location, $rootScope, $cookieSt
 					{'term': 'Fall / 2013', 'values' :{'class': 'CS 470', 'description': 'Computer Networking Protocols', 'grade': 'A+'}},
 					{'term': 'Winter / 2013', 'values':{'class': 'CS 312', 'description': 'Data Structures and Algorithms', 'grade': 'B'}},
 					{'term': 'Winter / 2013', 'values':{'class': 'CS 520', 'description': 'Advanced Web Programming', 'grade': 'B'}}];
-          
+		  
   $scope.terms = [{"key": "key1", "value": "Winter / 2013"},
-          {"key": "key2", "value": "Spring / 2013"},
-          {"key": "key3", "value": "Summer / 2013"},
-          {"key": "key4", "value": "Fall / 2013"}];
+		  {"key": "key2", "value": "Spring / 2013"},
+		  {"key": "key3", "value": "Summer / 2013"},
+		  {"key": "key4", "value": "Fall / 2013"}];
   
   $scope.SelectedTerm = $scope.terms[0];
 }
@@ -116,16 +116,17 @@ function GeneralSchCtrl($scope, $http) {
 	});
 }
 
-function ParkingMenuCtrl($scope, $http, $routeParams) {
+function ParkingMenuCtrl($scope, $http, $routeParams, Staging) {
 	$scope.parkings = [
 	{'id': 'p1','name':'Lot 1', 'sign': '$ M P H', 'space':6,'capacity':20}, {'id': 'p2', 'name':'Lot 2', 'sign': '$ M P H', 'space': 9,'capacity':50}, {'id': 'p3', 'name':'Lot 3', 'sign': '$ M P H', 'space':20,'capacity':40}
 	];
 
-	$http.get('sampledata/parkingStructure.json').success(
-		function(data) {
-			$scope.spots = data;
-		}
-	);
+	$scope.spots = Staging.get($routeParams.parkingID);
+
+	$scope.updateSpot = function(spotID) {
+		$scope.spots[spotID].beTaken="Taken";
+		Staging.put($scope.spots, $routeParams.parkingID);
+	};
 
 	$scope.parkingID = $routeParams.parkingID;
 
