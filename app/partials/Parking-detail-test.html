@@ -18,12 +18,16 @@
 					<th>
 						BeTaken
 					</th>
+					<th>
+						Test Empty
+					</th>
 				</tr>
 				<tbody ng-repeat="(id,spot) in spots">
 					<tr>
 						<td>spot {{spot.spaceNumber}}</td>
 						<td>{{spot.permitType}}</td>
 						<td>{{spot.beTaken}}</td>
+						<td><button ng-click="updateSpotTaken(id)">Sensor Testing</button></td>
 					</tr>
 				</tbody>
 			</table>

@@ -48,7 +48,6 @@ angular.module('csm.directives', []).
         var m = date.getMonth();
         var y = date.getFullYear();
 
-        console.log("calendar: " + calendar.html());
         calendar.fullCalendar({
           header: {
             left: 'prev,next today',
@@ -147,7 +146,7 @@ angular.module('csm.directives', []).
             });
         }
       }
-    }
+    };
   }).
   // Register the 'myCurrentTime' directive factory method.
   // We inject $timeout and dateFilter service since the factory method is DI.
@@ -184,7 +183,7 @@ angular.module('csm.directives', []).
       });
  
       updateLater(); // kick off the UI update process.
-    }
+    };
   }).
   directive('emailsHolder', function() {
     return {

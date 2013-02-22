@@ -128,6 +128,11 @@ function ParkingMenuCtrl($scope, $http, $routeParams, Staging) {
 		Staging.put($scope.spots, $routeParams.parkingID);
 	};
 
+	$scope.updateSpotTaken = function(spotID) {
+		$scope.spots[spotID].beTaken="Empty";
+		Staging.put($scope.spots, $routeParams.parkingID);
+	};
+
 	$scope.parkingID = $routeParams.parkingID;
 
 	$scope.format = 'h:mm:ss a';
