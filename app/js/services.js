@@ -588,6 +588,12 @@ angular.module('csm.services', ['ngResource']).
           }
       };
 
+      var parkingInfo = [
+        {'id': 'p1','name':'Lot 1', 'sign': '$ M P H', 'space':7,'capacity':20},
+        {'id': 'p2', 'name':'Lot 2', 'sign': '$ M P H', 'space':20,'capacity':20},
+        {'id': 'p3', 'name':'Lot 3', 'sign': '$ M P H', 'space':20,'capacity':20}
+      ];
+
       return {
         put: function(item, parkingID) {
           if (parkingID == 'p1')
@@ -606,6 +612,12 @@ angular.module('csm.services', ['ngResource']).
             return parkingLot3;
           else
             return [];
+        },
+        getInfo: function() {
+          return parkingInfo;
+        },
+        putInfo: function(item) {
+          parkingInfo = item;
         }
       };
     });

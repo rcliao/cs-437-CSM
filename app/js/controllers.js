@@ -117,27 +117,41 @@ function GeneralSchCtrl($scope, $http) {
 }
 
 function ParkingMenuCtrl($scope, $http, $routeParams, Staging) {
-	$scope.parkings = [
-	{'id': 'p1','name':'Lot 1', 'sign': '$ M P H', 'space':6,'capacity':20}, {'id': 'p2', 'name':'Lot 2', 'sign': '$ M P H', 'space': 9,'capacity':50}, {'id': 'p3', 'name':'Lot 3', 'sign': '$ M P H', 'space':20,'capacity':40}
-	];
+	$scope.parkings = Staging.getInfo();
+
+	$scope.updateParkingInfo = function() {
+		Staging.putInfo($scope.parkings);
+	};
 
 	$scope.spots = Staging.get($routeParams.parkingID);
 
 	$scope.updateSpot = function(spotID) {
 		$scope.spots[spotID].beTaken="Taken";
+		if ($routeParams.parkingID == 'p1')
+			$scope.parkings[0].space--;
+		else if ($routeParams.parkingID == 'p2')
+			$scope.parkings[1].space--;
+		else if ($routeParams.parkingID == 'p3')
+			$scope.parkings[2].space--;
+		Staging.putInfo($scope.parkings);
 		Staging.put($scope.spots, $routeParams.parkingID);
 	};
 
 	$scope.updateSpotTaken = function(spotID) {
 		$scope.spots[spotID].beTaken="Empty";
+		if ($routeParams.parkingID == 'p1')
+			$scope.parkings[0].space++;
+		else if ($routeParams.parkingID == 'p2')
+			$scope.parkings[1].space++;
+		else if ($routeParams.parkingID == 'p3')
+			$scope.parkings[2].space++;
+		Staging.putInfo($scope.parkings);
 		Staging.put($scope.spots, $routeParams.parkingID);
 	};
 
 	$scope.parkingID = $routeParams.parkingID;
 
 	$scope.format = 'h:mm:ss a';
-
-	$scope.Empty = 'Empty';
 }
 
 function GMapCtrl($scope, $http) {

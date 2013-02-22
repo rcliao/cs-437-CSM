@@ -2,12 +2,14 @@
 <html lang="en" ng-app="csm">
 <title>Template</title>
 
+<!-- css files -->
 <link rel="stylesheet" media="screen and (max-width: 850px)" href="css/style.css" type="text/css" />
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
 <link rel='stylesheet' type='text/css' href='lib/fullcalendar/fullcalendar.css' />
 <link rel='stylesheet' type='text/css' href='lib/fullcalendar/fullcalendar.print.css' media='print' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+<!-- extra libraries -->
 <script src="lib/jquery-1.9.0.js"></script>
 <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 <script src="lib/jquery-ui-1.10.0.custom.js"></script>
@@ -19,6 +21,7 @@
 <script type='text/javascript' src='lib/fullcalendar/fullcalendar.min.js'></script>
 <script type="text/javascript" src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDd0ich8m9pPD-oPHosVm95Qa1lhvVK2rE&sensor=true'></script>
 
+<!-- angularjs controller, apis -->
 <script src="js/services.js"></script>
 <script src="js/directives.js"></script>
 <script src="js/controllers.js"></script>
@@ -28,24 +31,27 @@
 
 
 </head>
+<!-- set up the main controller and set up the pop-up directives -->
 <body ng-controller = "MainController" class="auth-demo-application">
+	<!-- parking instruction (pop-up responding to event) -->
 	<div id="parking-instruction" ng-include src="'partials/parking-instruction.html'" title="Instruction"></div>
 	<div class="main-container">
+		<!-- login slide down responding to event -->
 		<div id="login-container">
 		<form ng-submit="login()">
-		<table class="login" border="0" cellpadding="0" cellspacing="0">
-			<tr>
-				<th>Username</th>
-				<td><input type="text" ng-model="username"/></td>
-			</tr>
-			<tr>
-				<th>Password</th>
-				<td><input type="password" ng-model="password"/></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input class="login" type="submit" value="Log In"/></td>
-			</tr>
-		</table>
+			<table class="login" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<th>Username</th>
+					<td><input type="text" ng-model="username"/></td>
+				</tr>
+				<tr>
+					<th>Password</th>
+					<td><input type="password" ng-model="password"/></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input class="login" type="submit" value="Log In"/></td>
+				</tr>
+			</table>
 		</form>
 		</div>
 		<div id = "content" ng:controller="MainController">
