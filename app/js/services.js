@@ -269,7 +269,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 1,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "201":{
                 "lotNumber" : "p2",
@@ -277,7 +277,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 1,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "202":{
                 "lotNumber" : "p2",
@@ -285,7 +285,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 1,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "203":{
                 "lotNumber" : "p2",
@@ -293,7 +293,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 1,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "204":{
                 "lotNumber" : "p2",
@@ -301,7 +301,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "205":{
                 "lotNumber" : "p2",
@@ -309,7 +309,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "206":{
                 "lotNumber" : "p2",
@@ -317,7 +317,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "207":{
                 "lotNumber" : "p2",
@@ -325,7 +325,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "208":{
                 "lotNumber" : "p2",
@@ -333,7 +333,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "209":{
                 "lotNumber" : "p2",
@@ -341,7 +341,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "210":{
                 "lotNumber" : "p2",
@@ -349,7 +349,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "211":{
                 "lotNumber" : "p2",
@@ -357,7 +357,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "212":{
                 "lotNumber" : "p2",
@@ -365,7 +365,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "213":{
                 "lotNumber" : "p2",
@@ -373,7 +373,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "214":{
                 "lotNumber" : "p2",
@@ -381,7 +381,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "215":{
                 "lotNumber" : "p2",
@@ -389,7 +389,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "216":{
                 "lotNumber" : "p2",
@@ -397,7 +397,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "217":{
                 "lotNumber" : "p2",
@@ -405,7 +405,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "218":{
                 "lotNumber" : "p2",
@@ -413,7 +413,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "219":{
                 "lotNumber" : "p2",
@@ -421,7 +421,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           }
       };
 
@@ -432,7 +432,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 1,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "301":{
                 "lotNumber" : "p3",
@@ -440,7 +440,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 1,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "302":{
                 "lotNumber" : "p3",
@@ -448,7 +448,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 1,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "303":{
                 "lotNumber" : "p3",
@@ -456,7 +456,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 1,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "304":{
                 "lotNumber" : "p3",
@@ -464,7 +464,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "305":{
                 "lotNumber" : "p3",
@@ -472,7 +472,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "306":{
                 "lotNumber" : "p3",
@@ -480,7 +480,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "307":{
                 "lotNumber" : "p3",
@@ -488,7 +488,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "308":{
                 "lotNumber" : "p3",
@@ -496,7 +496,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "309":{
                 "lotNumber" : "p3",
@@ -504,7 +504,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "310":{
                 "lotNumber" : "p3",
@@ -512,7 +512,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "311":{
                 "lotNumber" : "p3",
@@ -520,7 +520,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "312":{
                 "lotNumber" : "p3",
@@ -528,7 +528,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "313":{
                 "lotNumber" : "p3",
@@ -536,7 +536,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Student",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "314":{
                 "lotNumber" : "p3",
@@ -544,7 +544,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "315":{
                 "lotNumber" : "p3",
@@ -552,7 +552,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "316":{
                 "lotNumber" : "p3",
@@ -560,7 +560,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "317":{
                 "lotNumber" : "p3",
@@ -568,7 +568,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "318":{
                 "lotNumber" : "p3",
@@ -576,7 +576,7 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           },
           "319":{
                 "lotNumber" : "p3",
@@ -584,14 +584,14 @@ angular.module('csm.services', ['ngResource']).
                 "permitType" : "Faculty",
                 "handicap" : 0,
                 "meter" : 0,
-                "beTaken" : "Empty"
+                "beTaken" : "Taken"
           }
       };
 
       var parkingInfo = [
         {'id': 'p1','name':'Lot 1', 'sign': '$ M P H', 'space':7,'capacity':20},
-        {'id': 'p2', 'name':'Lot 2', 'sign': '$ M P H', 'space':20,'capacity':20},
-        {'id': 'p3', 'name':'Lot 3', 'sign': '$ M P H', 'space':20,'capacity':20}
+        {'id': 'p2', 'name':'Lot 2', 'sign': 'P H', 'space':0,'capacity':20},
+        {'id': 'p3', 'name':'Lot 3', 'sign': '$ H', 'space':  0,'capacity':20}
       ];
 
       return {

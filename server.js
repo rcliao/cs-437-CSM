@@ -332,7 +332,7 @@ app.get('/api/emailcount/inbox', function(req, res) {
     if (err) die(err);
     imap.status('INBOX', function(err, box){
       res.send(JSON.stringify(box.messages.unseen));
-      imap.logout();
+        
     });
   });
 });

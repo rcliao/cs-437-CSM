@@ -62,23 +62,26 @@ angular.module('csm.directives', []).
             },
             {
               title: 'CS 470',
-              start: new Date(y, m, d-5),
-              end: new Date(y, m, d-2)
-            },
-            {
-              id: 999,
-              title: 'CS 450',
-              start: new Date(y, m, d-3, 16, 0),
+              start: new Date(y, m, d-1, 18, 0),
+              end: new Date(y, m, d-1, 21, 40),
               allDay: false
             },
             {
               id: 999,
-              title: 'CS 320',
-              start: new Date(y, m, d+4, 16, 0),
+              title: 'CS 450 @ ET-310',
+              start: new Date(y, m, d-3, 9, 50),
+              end: new Date(y, m, d-3, 11, 30),
               allDay: false
             },
             {
-              title: 'CS Senior Design Meeting',
+              id: 999,
+              title: 'CS 450 @ ET-310',
+              start: new Date(y, m, d-1, 9, 50),
+              end: new Date(y, m, d-1, 11, 30),
+              allDay: false
+            },
+            {
+              title: 'CS Senior Design Meeting @ ET-309',
               start: new Date(y, m, d, 10, 30),
               allDay: false
             },
@@ -89,16 +92,10 @@ angular.module('csm.directives', []).
               allDay: false
             },
             {
-              title: 'CS 437',
+              title: 'CS 437 @ ET-210',
               start: new Date(y, m, d, 18, 10),
-              end: new Date(y, m, d, 22, 0),
+              end: new Date(y, m, d, 20, 40),
               allDay: false
-            },
-            {
-              title: 'Click for Google',
-              start: new Date(y, m, 28),
-              end: new Date(y, m, 29),
-              url: 'http://google.com/'
             }
           ]
         });
@@ -127,16 +124,89 @@ angular.module('csm.directives', []).
         map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
         directionsDisplay.setMap(map);
         directionsDisplay.setPanel(document.getElementById("directions"));
-        
+
         routeMode.on("change", function() { calcRoute(); });
         routeGo.on("click", function() { calcRoute(); });
         routeClear.on("click", function() { directionsDisplay.setDirections({ routes: [] }); });
 
-        
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(34.0653700000001, -118.165010),
+          map: map
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map, this);
+        });
+
+        var marker2 = new google.maps.Marker({
+          position: new google.maps.LatLng(34.0699944005297, -118.16820734443665),
+          map: map
+        });
+
+        google.maps.event.addListener(marker2, 'click', function() {
+          infowindow2.open(map, this);
+        });
+
+        var marker3 = new google.maps.Marker({
+          position: new google.maps.LatLng(34.0658195014605, -118.17142599525452),
+          map: map
+        });
+
+        google.maps.event.addListener(marker3, 'click', function() {
+          infowindow3.open(map, this);
+        });
+
+        var content = '<strong>Parking Lot 1</strong>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: content
+        });
+
+        var content2 = '<strong>Parking Lot 2</strong>';
+
+        var infowindow2 = new google.maps.InfoWindow({
+          content: content2
+        });
+
+        var content3 = '<strong>Parking Lot 3</strong>';
+
+        var infowindow3 = new google.maps.InfoWindow({
+          content: content3
+        });
+
+        // navigator.geolocation.getCurrentPosition(
+        //   function( position ){
+
+        //     // Check to see if there is already a location.
+        //     // There is a bug in FireFox where this gets
+        //     // invoked more than once with a cahced result.
+
+        //     // Log that this is the initial position.
+        //     console.log( "Initial Position Found" );
+
+        //     // Add a marker to the map using the position.
+        //     var myOptions = {
+        //         zoom: 14,
+        //         mapTypeId: google.maps.MapTypeId.ROADMAP,
+        //         center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
+        //     };
+
+        //     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+        //   },
+        //   function( error ){
+        //     console.log( "Something went wrong: ", error );
+        //     },
+        //     {
+        //         timeout: (5 * 1000),
+        //         maximumAge: (1000 * 60 * 15),
+        //         enableHighAccuracy: true
+        //     }
+        // );
+
         function calcRoute() {
             var request = {
-                origin: routeTo.val(),
-                destination: routeFrom.val(),
+                origin: routeFrom.val(),
+                destination: new google.maps.LatLng(34.0658195014605, -118.17142599525452),
                 travelMode: google.maps.TravelMode[routeMode.val()]
             };
             directionsService.route(request, function(response, status) {

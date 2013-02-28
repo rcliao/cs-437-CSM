@@ -401,3 +401,14 @@
 .CSSTable tr:first-child td:last-child{
 	border-width:0px 0px 1px 1px;
 }
+
+#map_canvas{
+    width: 95%;
+    height: 400px;
+    border: 1px solid black;
+    float: left;
+}
+#directions {
+    width: 95%;
+    float: left; 
+}
